@@ -1,8 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace LocationsMapper.Database
 {
@@ -15,5 +11,16 @@ namespace LocationsMapper.Database
         { }
 
         public DbSet<CragLocation> CragLocations { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<CragLocation>()
+                .Property(location => location.Latitude)
+                .HasColumnType("decimal(38, 8)");
+
+            modelBuilder.Entity<CragLocation>()
+                .Property(location => location.Longitude)
+                .HasColumnType("decimal(38, 8)");
+        }
     }
 }

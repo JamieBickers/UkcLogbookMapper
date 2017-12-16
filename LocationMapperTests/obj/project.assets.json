@@ -14338,11 +14338,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jamie\\Desktop\\LocationsMapper\\LocationMapperTests\\LocationMapperTests.csproj",
+      "projectUniqueName": "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\LocationMapperTests\\LocationMapperTests.csproj",
       "projectName": "LocationMapperTests",
-      "projectPath": "C:\\Users\\Jamie\\Desktop\\LocationsMapper\\LocationMapperTests\\LocationMapperTests.csproj",
+      "projectPath": "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\LocationMapperTests\\LocationMapperTests.csproj",
       "packagesPath": "C:\\Users\\Jamie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jamie\\Desktop\\LocationsMapper\\LocationMapperTests\\obj\\",
+      "outputPath": "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\LocationMapperTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -14361,8 +14361,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\Jamie\\Desktop\\LocationsMapper\\LocationsMapper\\LocationsMapper.csproj": {
-              "projectPath": "C:\\Users\\Jamie\\Desktop\\LocationsMapper\\LocationsMapper\\LocationsMapper.csproj"
+            "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\LocationsMapper\\LocationsMapper.csproj": {
+              "projectPath": "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\LocationsMapper\\LocationsMapper.csproj"
             }
           }
         }

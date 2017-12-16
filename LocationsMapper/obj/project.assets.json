@@ -13337,11 +13337,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jamie\\Desktop\\LocationsMapper\\LocationsMapper\\LocationsMapper.csproj",
+      "projectUniqueName": "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\LocationsMapper\\LocationsMapper.csproj",
       "projectName": "LocationsMapper",
-      "projectPath": "C:\\Users\\Jamie\\Desktop\\LocationsMapper\\LocationsMapper\\LocationsMapper.csproj",
+      "projectPath": "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\LocationsMapper\\LocationsMapper.csproj",
       "packagesPath": "C:\\Users\\Jamie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jamie\\Desktop\\LocationsMapper\\LocationsMapper\\obj\\",
+      "outputPath": "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\LocationsMapper\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
