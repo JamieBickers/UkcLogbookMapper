@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Index";
+
+    var ukcUserName = Context.Request.Query["user"];
+    string url = "";
+    var displayLink = "none";
+
+    if (!String.IsNullOrEmpty(ukcUserName))
+    {
+        displayLink = "block";
+        url = $"http://localhost:61046/Home/Map?userName={ukcUserName}";
+    }
+}
+
+<h2>UKC Logbook Mapper</h2>
+
+<p>Enter your UKC username below, hit enter, then click the link to show a map of all your climbs.</p>
+<p>This may be very slow the first time you try it, but it should speed up after. If you have over 1000 climbs logged it may fail to load.</p>
+
+<form method="get">
+    <input type="text" name="user" />
+</form>
+
+<div style="display: @displayLink">
+    <a href=@url>link text</a>
+</div>
