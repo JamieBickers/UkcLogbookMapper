@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocationMapper.Repository",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocationMapper.WebUi", "LocationMapper.WebUi\LocationMapper.WebUi.csproj", "{5A937CF6-BCA8-45EF-BEFC-FEFCBB8976CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationMapper.Tests", "LocationMapper.Tests\LocationMapper.Tests.csproj", "{8373CFE8-FF3A-408C-9F7F-AAB771633886}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{5A937CF6-BCA8-45EF-BEFC-FEFCBB8976CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A937CF6-BCA8-45EF-BEFC-FEFCBB8976CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A937CF6-BCA8-45EF-BEFC-FEFCBB8976CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8373CFE8-FF3A-408C-9F7F-AAB771633886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8373CFE8-FF3A-408C-9F7F-AAB771633886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8373CFE8-FF3A-408C-9F7F-AAB771633886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8373CFE8-FF3A-408C-9F7F-AAB771633886}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v2.0": {
       "LocationMapper.Repository/1.0.0": {
         "dependencies": {
-          "Entities": "1.0.0",
+          "LocationMapper.Entities": "1.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "2.0.1"
         },
         "runtime": {
@@ -336,9 +336,9 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
-      "Entities/1.0.0": {
+      "LocationMapper.Entities/1.0.0": {
         "runtime": {
-          "Entities.dll": {}
+          "LocationMapper.Entities.dll": {}
         }
       }
     }
@@ -650,7 +650,7 @@
       "path": "system.threading.tasks.extensions/4.3.0",
       "hashPath": "system.threading.tasks.extensions.4.3.0.nupkg.sha512"
     },
-    "Entities/1.0.0": {
+    "LocationMapper.Entities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

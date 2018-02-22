@@ -22,12 +22,10 @@ C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\bin\Debug\netcoreapp
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\bin\Debug\netcoreapp2.0\LocationMapperTests.runtimeconfig.dev.json
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\bin\Debug\netcoreapp2.0\LocationMapperTests.dll
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\bin\Debug\netcoreapp2.0\LocationMapperTests.pdb
-C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\bin\Debug\netcoreapp2.0\Entities.dll
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\bin\Debug\netcoreapp2.0\LocationMapper.Repository.dll
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\bin\Debug\netcoreapp2.0\LocationMapper.WebScrapers.dll
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\bin\Debug\netcoreapp2.0\LocationsMapper.dll
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\bin\Debug\netcoreapp2.0\LocationsMapper.pdb
-C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\bin\Debug\netcoreapp2.0\Entities.pdb
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\bin\Debug\netcoreapp2.0\LocationMapper.Repository.pdb
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\bin\Debug\netcoreapp2.0\LocationMapper.WebScrapers.pdb
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\obj\Debug\netcoreapp2.0\LocationMapperTests.csprojResolveAssemblyReference.cache
@@ -36,3 +34,5 @@ C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\obj\Debug\netcoreapp
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\obj\Debug\netcoreapp2.0\LocationMapperTests.AssemblyInfo.cs
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\obj\Debug\netcoreapp2.0\LocationMapperTests.dll
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\obj\Debug\netcoreapp2.0\LocationMapperTests.pdb
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\bin\Debug\netcoreapp2.0\LocationMapper.Entities.dll
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapperTests\bin\Debug\netcoreapp2.0\LocationMapper.Entities.pdb

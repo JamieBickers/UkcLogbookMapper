@@ -7,6 +7,6 @@ namespace LocationMapper.WebScrapers.Interfaces
     {
         bool TryGetAllClimbsOnPage(string page, out IEnumerable<LogbookEntry> climbs);
         bool TryGetRoughCragLocation(string page, out (string County, string Country) location);
-        bool TryGetUserIdOnPage(string page, out string userIdAsString);
+        bool TryGetUserIdOnSearchPage(string page, out string userIdAsString);
     }
 }

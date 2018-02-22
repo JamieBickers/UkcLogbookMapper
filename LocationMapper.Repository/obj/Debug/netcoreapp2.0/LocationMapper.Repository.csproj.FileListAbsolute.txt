@@ -4,8 +4,8 @@ C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\obj\Debug\netc
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\obj\Debug\netcoreapp2.0\LocationMapper.Repository.AssemblyInfo.cs
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\LocationMapper.Repository.deps.json
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\LocationMapper.Repository.dll
-C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\Entities.dll
-C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\Entities.pdb
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\LocationMapper.Repository.pdb
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\obj\Debug\netcoreapp2.0\LocationMapper.Repository.dll
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\obj\Debug\netcoreapp2.0\LocationMapper.Repository.pdb
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\LocationMapper.Entities.dll
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\LocationMapper.Entities.pdb

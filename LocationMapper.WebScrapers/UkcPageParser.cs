@@ -4,7 +4,10 @@ using LocationMapper.WebScrapers.Interfaces;
 using LocationsMapper.WebScrapers;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
+
+[assembly: InternalsVisibleTo("LocationMapperTests")]
 
 namespace LocationMapper.WebScrapers
 {
@@ -25,10 +28,10 @@ namespace LocationMapper.WebScrapers
             var rows = parsedWebPage
                 .All
                 .FirstOrDefault(element => element.LocalName == "tbody") // only one table in the page which is the one we want
-                .Children
+                ?.Children
                 .Where(node => node.LocalName == "tr"); // each row is one climb
 
-            if (rows.Count() == 0)
+            if ((rows?.Count() ?? 0) == 0)
             {
                 climbs = null;
                 return false;
@@ -70,25 +73,43 @@ namespace LocationMapper.WebScrapers
 
             var locationDetailsList = parsedWebPage
                 .All
-                .First(element => element.LocalName == "ol"); // only one ordered list on the page
+                .FirstOrDefault(element => element.LocalName == "ol"); // only one ordered list on the page
 
-            var county = locationDetailsList
-                .Children[2]
-                .Children
-                .First()
-                .InnerHtml;
+            // Check really is a ukc crag page.
+            var firstElementContent = locationDetailsList?.Children?.FirstOrDefault()?.OuterHtml;
+            if (firstElementContent == "<li class=\"breadcrumb-item\"><a href=\"/logbook/\">Logbooks</a></li>")
+            {
+                var county = locationDetailsList
+                    ?.Children[2]
+                    ?.Children
+                    ?.FirstOrDefault()
+                    ?.InnerHtml;
 
-            var country = locationDetailsList
-                .Children[1]
-                .Children
-                .First()
-                .InnerHtml;
+                var country = locationDetailsList
+                    ?.Children[1]
+                    ?.Children
+                    ?.FirstOrDefault()
+                    ?.InnerHtml;
 
-            location = (County: county, Country: country);
-            return true;
+                location = (County: county, Country: country);
+            }
+            else
+            {
+                location = (County: null, Country: null);
+            }
+
+
+            if (location.County == null && location.County == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
-        public bool TryGetUserIdOnPage(string page, out string userIdAsString)
+        public bool TryGetUserIdOnSearchPage(string page, out string userIdAsString)
         {
             var hyperlinkContainingUserIdRegex = new Regex(@"profile.php\?id=[0-9]*");
 

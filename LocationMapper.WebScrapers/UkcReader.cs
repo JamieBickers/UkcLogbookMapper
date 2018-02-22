@@ -3,6 +3,9 @@ using LocationMapper.WebScrapers.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("LocationMapperTests")]
 
 namespace LocationMapper.WebScrapers
 {
@@ -62,7 +65,7 @@ namespace LocationMapper.WebScrapers
         {
             var page = pageReader.GetSearchPage(userName);
             
-            if (pageParser.TryGetUserIdOnPage(page, out var userIdAsString))
+            if (pageParser.TryGetUserIdOnSearchPage(page, out var userIdAsString))
             {
                 return int.TryParse(userIdAsString, out userId);
             }

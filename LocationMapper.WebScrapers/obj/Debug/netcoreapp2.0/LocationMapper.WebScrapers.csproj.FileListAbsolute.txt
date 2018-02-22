@@ -1,8 +1,6 @@
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebScrapers\bin\Debug\netcoreapp2.0\LocationMapper.WebScrapers.deps.json
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebScrapers\bin\Debug\netcoreapp2.0\LocationMapper.WebScrapers.dll
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebScrapers\bin\Debug\netcoreapp2.0\LocationMapper.WebScrapers.pdb
-C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebScrapers\bin\Debug\netcoreapp2.0\Entities.dll
-C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebScrapers\bin\Debug\netcoreapp2.0\Entities.pdb
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebScrapers\obj\Debug\netcoreapp2.0\LocationMapper.WebScrapers.csprojResolveAssemblyReference.cache
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebScrapers\obj\Debug\netcoreapp2.0\LocationMapper.WebScrapers.csproj.CoreCompileInputs.cache
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebScrapers\obj\Debug\netcoreapp2.0\LocationMapper.WebScrapers.AssemblyInfoInputs.cache
@@ -11,3 +9,5 @@ C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebScrapers\obj\Debug\net
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebScrapers\obj\Debug\netcoreapp2.0\LocationMapper.WebScrapers.pdb
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebScrapers\bin\Debug\netcoreapp2.0\LocationMapper.Repository.dll
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebScrapers\bin\Debug\netcoreapp2.0\LocationMapper.Repository.pdb
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebScrapers\bin\Debug\netcoreapp2.0\LocationMapper.Entities.dll
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebScrapers\bin\Debug\netcoreapp2.0\LocationMapper.Entities.pdb
