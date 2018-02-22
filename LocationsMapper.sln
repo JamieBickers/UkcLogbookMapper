@@ -1,11 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2010
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationsMapper", "LocationsMapper\LocationsMapper.csproj", "{6A511F9C-EA65-4616-81FB-9A5B20A7EE0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocationsMapper", "LocationsMapper\LocationsMapper.csproj", "{6A511F9C-EA65-4616-81FB-9A5B20A7EE0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationMapperTests", "LocationMapperTests\LocationMapperTests.csproj", "{17201E3A-B377-4244-A4FB-DC6B9DE78926}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocationMapperTests", "LocationMapperTests\LocationMapperTests.csproj", "{17201E3A-B377-4244-A4FB-DC6B9DE78926}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocationMapper.WebScrapers", "LocationMapper.WebScrapers\LocationMapper.WebScrapers.csproj", "{0BB9531E-2348-4BED-870B-58947560709B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocationMapper.Entities", "Entities\LocationMapper.Entities.csproj", "{12310C04-B301-4C99-A85F-DB90553081CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocationMapper.Repository", "LocationMapper.Repository\LocationMapper.Repository.csproj", "{4405CABD-BB71-4792-A774-556AC5CCC2E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocationMapper.WebUi", "LocationMapper.WebUi\LocationMapper.WebUi.csproj", "{5A937CF6-BCA8-45EF-BEFC-FEFCBB8976CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,22 @@ Global
 		{17201E3A-B377-4244-A4FB-DC6B9DE78926}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17201E3A-B377-4244-A4FB-DC6B9DE78926}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17201E3A-B377-4244-A4FB-DC6B9DE78926}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BB9531E-2348-4BED-870B-58947560709B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BB9531E-2348-4BED-870B-58947560709B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BB9531E-2348-4BED-870B-58947560709B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BB9531E-2348-4BED-870B-58947560709B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12310C04-B301-4C99-A85F-DB90553081CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12310C04-B301-4C99-A85F-DB90553081CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12310C04-B301-4C99-A85F-DB90553081CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12310C04-B301-4C99-A85F-DB90553081CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4405CABD-BB71-4792-A774-556AC5CCC2E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4405CABD-BB71-4792-A774-556AC5CCC2E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4405CABD-BB71-4792-A774-556AC5CCC2E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4405CABD-BB71-4792-A774-556AC5CCC2E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A937CF6-BCA8-45EF-BEFC-FEFCBB8976CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A937CF6-BCA8-45EF-BEFC-FEFCBB8976CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A937CF6-BCA8-45EF-BEFC-FEFCBB8976CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A937CF6-BCA8-45EF-BEFC-FEFCBB8976CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,6 @@
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationsMapper
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=LocationsMapper
+--content-root=C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationsMapper
+--file=C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationsMapper\Views\Home\Index.cshtml
+--file=C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationsMapper\Views\Home\Map.cshtml

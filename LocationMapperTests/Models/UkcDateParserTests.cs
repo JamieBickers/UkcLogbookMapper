@@ -1,6 +1,7 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using LocationsMapper.Models;
+using LocationsMapper.WebScrapers;
 
 namespace LocationsMapperTests
 {

@@ -1,0 +1,11 @@
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebUi\bin\Debug\netcoreapp2.0\LocationMapper.WebUi.deps.json
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebUi\bin\Debug\netcoreapp2.0\LocationMapper.WebUi.runtimeconfig.json
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebUi\bin\Debug\netcoreapp2.0\LocationMapper.WebUi.runtimeconfig.dev.json
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebUi\bin\Debug\netcoreapp2.0\LocationMapper.WebUi.dll
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebUi\bin\Debug\netcoreapp2.0\LocationMapper.WebUi.pdb
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebUi\obj\Debug\netcoreapp2.0\LocationMapper.WebUi.csprojResolveAssemblyReference.cache
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebUi\obj\Debug\netcoreapp2.0\LocationMapper.WebUi.csproj.CoreCompileInputs.cache
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebUi\obj\Debug\netcoreapp2.0\LocationMapper.WebUi.AssemblyInfoInputs.cache
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebUi\obj\Debug\netcoreapp2.0\LocationMapper.WebUi.AssemblyInfo.cs
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebUi\obj\Debug\netcoreapp2.0\LocationMapper.WebUi.dll
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.WebUi\obj\Debug\netcoreapp2.0\LocationMapper.WebUi.pdb
