@@ -6,28 +6,37 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("LocationMapperTests")]
+[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
 
 namespace LocationMapper.WebScrapers
 {
     public class UkcReader : IUkcReader
     {
-        private UkcPageReader pageReader;
-        private UkcPageParser pageParser;
+        private IUkcPageReader pageReader;
+        private IUkcPageParser pageParser;
 
-        public UkcReader()
+        public UkcReader() : this(new UkcPageReader(), new UkcPageParser())
         {
-            pageReader = new UkcPageReader();
-            pageParser = new UkcPageParser();
+
+        }
+
+        internal UkcReader(IUkcPageReader pageReader, IUkcPageParser pageParser)
+        {
+            this.pageReader = pageReader;
+            this.pageParser = pageParser;
         }
 
         public IEnumerable<LogbookEntry> GetAllClimbs(string userName)
         {
+            // Keep track of viewed pages to detect loops.
+            var pages = new List<string>();
+
             if (!TryGetUserId(userName, out var userId))
             {
-                return new List<LogbookEntry>();
+                return null;
             }
 
-            var climbs = new List<LogbookEntry>();
+            IEnumerable<LogbookEntry> climbs = new List<LogbookEntry>();
 
             for (var i = 1; ; i++)
             {
@@ -37,9 +46,15 @@ namespace LocationMapper.WebScrapers
                 }
 
                 var page = pageReader.GetUserLogbookPage(userId, i);
-                if (pageParser.TryGetAllClimbsOnPage(page, out var climbsOnPage))
+                if (pages.Contains(page))
                 {
-                    climbs.Concat(climbsOnPage);
+                    // In a loop
+                    return climbs;
+                }
+                else if (pageParser.TryGetAllClimbsOnPage(page, out var climbsOnPage))
+                {
+                    climbs = climbs.Concat(climbsOnPage.ToList());
+                    pages.Add(page);
                 }
                 else
                 {
@@ -57,7 +72,7 @@ namespace LocationMapper.WebScrapers
             }
             else
             {
-                return (County: "", Country: "");
+                return (County: null, Country: null);
             }
         }
 

@@ -158,6 +158,17 @@ namespace LocationMapper.Tests.WebScrapers
         }
 
         [TestMethod]
+        public void TryGetUserIdOnPage_RandomWebPage_ExpectNoneFound()
+        {
+            var page = documentReader.ReadDocument("BbcNewsHomePage.txt");
+
+            var foundUserId = pageParser.TryGetUserIdOnSearchPage(page, out var userId);
+
+            Assert.IsFalse(foundUserId);
+            Assert.AreEqual(null, userId);
+        }
+
+        [TestMethod]
         public void TryGetUserIdOnPage_EmptyPage_ExpectNotFound()
         {
             var page = "";
