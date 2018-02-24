@@ -44,8 +44,8 @@ namespace LocationMapper.WebScrapers
                 name = row.FirstOrDefault(column => column.ClassName == "climb")?.Children?.FirstOrDefault()?.InnerHtml,
                 grade = row.FirstOrDefault(column => column.ClassName == "grade")?.InnerHtml,
                 date = row.FirstOrDefault(column => column.ClassName == "logdate text-center")?.InnerHtml,
-                crag = row.ToList().GetIndexOrDefault(6)?.Children?.FirstOrDefault()?.InnerHtml, // the crag is the 7th column
-                cragLink = row.ToList().GetIndexOrDefault(6)?.InnerHtml
+                crag = row.ToList().ElementAtOrDefault(6)?.Children?.FirstOrDefault()?.InnerHtml, // the crag is the 7th column
+                cragLink = row.ToList().ElementAtOrDefault(6)?.InnerHtml
             })
             .Where(data => data.name != null && data.name != "")
             .Select(data => new LogbookEntry()
@@ -113,9 +113,9 @@ namespace LocationMapper.WebScrapers
         {
             var hyperlinkContainingUserIdRegex = new Regex(@"profile.php\?id=[0-9]*");
 
-            if (!hyperlinkContainingUserIdRegex.IsMatch(page))
+            if (!hyperlinkContainingUserIdRegex.IsMatch(page ?? ""))
             {
-                userIdAsString = "";
+                userIdAsString = null;
                 return false;
             }
             else

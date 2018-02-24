@@ -1,0 +1,428 @@
+﻿<html lang="en"><head>
+  <title>UKC Secure - User Profiles</title>
+    <link rel="dns-prefetch" href="https://cdn.ukc2.com">
+  <link rel="dns-prefetch" href="//netdna.bootstrapcdn.com">
+  <link rel="dns-prefetch" href="//ajax.googleapis.com">
+  <link href="https://netdna.bootstrapcdn.com/" rel="preconnect" crossorigin="">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="">
+  <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://ukc2.com/bower_components/bootstrap-4.0.0-beta.2/dist/css/bootstrap.min.css"><link href="https://ukc2.com/bootstrap/css/bs3to4_hacks.min.css" rel="stylesheet">  <link href="https://cdn.ukc2.com/bootstrap/css/bootstrap4-theme.min.css?changed=180213113240" rel="stylesheet">    <style>
+    #top {
+      background-image: url(https://cdn.ukc2.com/core/header2016.jpg) !important;
+    }
+    #ukh #top {
+      background-image: url(https://cdn.ukc2.com/hill/header2016.jpg) !important;
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      #top {
+        background-image: url(https://cdn.ukc2.com/core/header2016@2x.jpg) !important;
+      }
+      #ukh #top {
+        background-image: url(https://cdn.ukc2.com/hill/header2016@2x.jpg) !important;
+      }
+    }
+    </style>  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">      <link href="//fonts.gstatic.com" rel="preconnect" crossorigin="">
+  <link type="text/css" media="screen" rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans:400italic,400,700italic,700">    <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.ukc2.com/ukc/apple-touch-icon-57x57.png?v=wAAWE68l2Y">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://cdn.ukc2.com/ukc/apple-touch-icon-60x60.png?v=wAAWE68l2Y">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.ukc2.com/ukc/apple-touch-icon-72x72.png?v=wAAWE68l2Y">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.ukc2.com/ukc/apple-touch-icon-76x76.png?v=wAAWE68l2Y">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.ukc2.com/ukc/apple-touch-icon-114x114.png?v=wAAWE68l2Y">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.ukc2.com/ukc/apple-touch-icon-120x120.png?v=wAAWE68l2Y">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.ukc2.com/ukc/apple-touch-icon-144x144.png?v=wAAWE68l2Y">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.ukc2.com/ukc/apple-touch-icon-152x152.png?v=wAAWE68l2Y">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.ukc2.com/ukc/apple-touch-icon-180x180.png?v=wAAWE68l2Y">
+    <link rel="icon" type="image/png" href="https://cdn.ukc2.com/ukc/favicon-32x32.png?v=wAAWE68l2Y" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://cdn.ukc2.com/ukc/favicon-194x194.png?v=wAAWE68l2Y" sizes="194x194">
+    <link rel="icon" type="image/png" href="https://cdn.ukc2.com/ukc/favicon-96x96.png?v=wAAWE68l2Y" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://cdn.ukc2.com/ukc/android-chrome-192x192.png?v=wAAWE68l2Y" sizes="192x192">
+    <link rel="icon" type="image/png" href="https://cdn.ukc2.com/ukc/favicon-16x16.png?v=wAAWE68l2Y" sizes="16x16">
+    <link rel="manifest" href="https://cdn.ukc2.com/ukc/manifest.json?v=wAAWE68l2Y">
+    <link rel="mask-icon" href="https://cdn.ukc2.com/ukc/safari-pinned-tab.svg?v=wAAWE68l2Y" color="#a52d34">
+    <link rel="shortcut icon" href="https://cdn.ukc2.com/ukc/favicon.ico?v=wAAWE68l2Y">
+    <meta name="apple-mobile-web-app-title" content="ukclimbing">
+    <meta name="application-name" content="ukclimbing">
+    <meta name="msapplication-TileColor" content="#ffcc66">
+    <meta name="msapplication-TileImage" content="https://cdn.ukc2.com/ukc/mstile-144x144.png?v=wAAWE68l2Y">
+    <meta name="msapplication-config" content="https://cdn.ukc2.com/ukc/browserconfig.xml?v=wAAWE68l2Y">
+    <meta name="theme-color" content="#ffcc66">  <meta name="twitter:dnt" content="on">
+  <link rel="search" title="Search" href="/general/search.php">
+  <script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>    <script>var MOBILE = false,
+  IMG_URL = "https://cdn.ukc2.com",
+  API = "https://api.ukclimbing.com";</script>
+    <script src="https://cdn.ukc2.com/core/supportus.js"></script>
+</head>
+  <body id="ukc" class="">
+    <div class="container-fluid p-0">
+      <a class="skiplink" href="#main" accesskey="s">Skip over navigation</a>      <header><div class="row hidden-xs" id="blockingAds" style="display:none"><div class="col-md-3 text-center"><h1>Adblock is enabled <i class="icon-frown"></i></h1><h3 style="color:#fc6">This site only exists because of support of our advertisers</h3></div><div class="col-md-9 top10" id="blockingAdsInfo"><button type="button" class="close" style="color:#fff;opacity:0.5" onclick="$('#blockingAds').slideUp();" title="Close message"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><p>At UKC/UKH we are all experienced internet users and as such we understand why some people want to use Ad Block to remove annoying and distracting advertising that proliferates on some web sites. <strong>We don't feel that UKC/UKH should be considered as such a site.</strong></p><p>We have developed a site that has subtle and appropriate advertising; we don't use pop-ups, we don't force you to read adverts before you can see content, we don't plaster content with adverts, and we don't use third party ad servers dishing up totally inappropriate advertising. We have worked incredibly hard over the years to make sure that we keep a good balance between advertising and editorial content.</p><p><strong>Please could you consider disabling Adblock when visiting UKC/UKH</strong></p></div></div>
+                <div class="container">
+
+                    <div class="row">
+            <div id="top" class="col-md-3 col-lg-4" style="height:90px;cursor:pointer" title="Homepage" onclick="document.location.href = '/'">
+              <h1 class="sr-only">UKC</h1>
+            </div>
+            <div class="col-md-9 col-lg-8 bg-black">
+              <div id="mainAd" class="pull-right" style="margin:0 -15px;"><a href="" target="_blank" rel="noopener" class="ad8528" onclick="$('html,body').animate({scrollTop: 0});$('#blockingAds').slideDown();return false;"><img src="https://cdn.ukc2.com/core/supportus.png"></a>              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="mainNav-container">
+          <nav id="mainNav" class="container navbar navbar-expand-md navbar-dark navbar-inverse nocontent" role="navigation" style="border: 0">
+            <button class="navbar-toggler" type="button" style="margin-left:10px; height: 42px" data-toggle="collapse" data-target="#mainNavItems" data-parent="#mainNav" onclick="$('#userNavItems,#forumNavItems,#logbookNavItems,#photoNavItems').removeClass('show')">
+              <span class="navbar-toggler-icon"></span>
+              <span class="d-none d-sm-inline"> Menu</span>
+            </button>
+            <button id="photoNavItemsBtn" type="button" class="navbar-toggler d-block d-md-none" data-toggle="collapse" data-target="#photoNavItems" style="padding: 7px 11px" data-parent="#mainNav" onclick="$('#mainNavItems,#userNavItems,#logbookNavItems,#forumNavItems').removeClass('show')">
+              <span class="sr-only">Toggle navigation</span>
+              <i class="fa fa-camera" style="color: #fff; font-size: 24px; padding: 0 2px 0 1px; "></i>
+            </button>
+            <button id="logbookNavItemsBtn" type="button" class="navbar-toggler d-block d-md-none" data-toggle="collapse" data-target="#logbookNavItems" style="padding: 4px 6px" data-parent="#mainNav" onclick="$('#mainNavItems,#userNavItems,#forumNavItems,#photoNavItems').removeClass('show')">
+              <span class="sr-only">Toggle navigation</span>
+              <svg style="fill: #fff; padding: 0 2px 0 1px;height: 30px;width: 30px;" class="iconlogbook" xmlns="http://www.w3.org/2000/svg" viewBox="9 2.1 18 16">
+          <path d="M11,15.8c0,0,2.1-7.7,2.5-8.4s0.9-0.4,1.4,0.2c0.5,0.6,1.1,1.3,1.1,1.3c0.3,0.3,0.6,0.3,1.1-0.2c0.5-0.5,4.6-4.3,4.6-4.3
+          s0.7-0.8,1.1,0.3c0.4,1.1,2.2,11.1,2.2,11.1s0.1,0.4-0.3,0.4c-0.3,0-13,0-13.3,0C11,16.2,11,15.8,11,15.8z"></path></svg>
+            </button>
+            <button id="forumNavItemsBtn" type="button" class="navbar-toggler d-block d-md-none" data-toggle="collapse" data-target="#forumNavItems" style="padding: 7px 11px" data-parent="#mainNav" onclick="$('#mainNavItems,#userNavItems,#logbookNavItems,#photoNavItems').removeClass('show')">
+              <span class="sr-only">Toggle navigation</span>
+              <i class="fa fa-comments-o" style="color: #fff; font-size: 24px; padding: 0 2px 0 1px; "></i>
+            </button>
+            <button type="button" class="navbar-toggler d-block d-md-none" style="margin-right:10px;padding: 7px 11px" data-toggle="collapse" data-target="#userNavItems" data-parent="#mainNav" onclick="$('#mainNavItems,#forumNavItems,#logbookNavItems,#photoNavItems').removeClass('show')">
+              <span class="sr-only">Toggle navigation</span>
+              <i class="fa fa-user loggedin" style="color: rgb(255, 255, 255); font-size: 24px; padding: 0px 2px 0px 1px; display: none;"></i>
+              <i class="fa fa-sign-in loggedout" style="color: rgb(255, 255, 255); font-size: 24px; padding: 0px 2px 0px 1px;"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavItems">
+              <ul class="navbar-nav mr-auto">            
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="/" id="homeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="d-none d-md-inline-block"><i class="fa fa-home"></i></span>
+                    <span class="d-inline-block d-md-none">Home</span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="homeDropdown">                    <a class="dropdown-item" href="/">Home</a>
+                    <a class="dropdown-item" href="https://www.ukhillwalking.com/">UKHillwalking</a>                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="/news/" id="newsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a> 
+                  <div class="dropdown-menu" aria-labelledby="newsDropdown" style="display: none;">
+                    <a class="dropdown-item" href="/news/">Latest News</a>
+                    <a class="dropdown-item" href="/news/press/2018/02/">Press Releases</a>
+                    <a class="dropdown-item" href="/news/competitions/">Competitions</a>
+                    <a class="dropdown-item" href="/news/events.html">Events Diary</a>
+                    <a class="dropdown-item" href="/news/weekly.php">Weekly Newsletter</a>
+                    <a class="dropdown-item" href="/news/job_finder/">Job Finder</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/news/help">Help</a>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="/articles/" data-toggle="dropdown">Articles</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/articles/">Latest Articles</a>
+                    <a class="dropdown-item" href="/articles/destinations/">Destination Articles</a>
+                    <a class="dropdown-item" href="/articles/skills/">Climbing Skills</a>
+                    <a class="dropdown-item" href="/articles/digital_features/">Digital Features</a>
+                    <a class="dropdown-item" href="/articles/trip_reports/">Trip Reports</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/articles/help">Help</a>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown ">
+                  <a class="nav-link dropdown-toggle" href="/gear/" data-toggle="dropdown">Gear</a> 
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/gear/">Latest Gear</a>
+                    <a class="dropdown-item" href="/gear/news/">Gear News</a>
+                    <a class="dropdown-item" href="/gear/reviews/">Gear Reviews</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/gear/help">Help</a>
+                  </div>
+
+                </li><li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="/listings/" data-toggle="dropdown">Directory</a> 
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/listings/">All Listings</a>                    <a class="dropdown-item" href="/logbook/map/">Find Crag</a>
+                    <a class="dropdown-item" href="/listings/?t=wall">Find Climbing Wall</a>                  <a class="dropdown-item" href="/listings/?t=shop">Find Outdoor Shop</a>                    <a class="dropdown-item" href="/listings/?t=club">Find Climbing Club</a>                  <a class="dropdown-item" href="/listings/?t=stay">Find Accommodation</a>
+                  <a class="dropdown-item" href="/listings/?t=learn">Find Instructor/Guide</a>
+                  <a class="dropdown-item" href="/listings/?t=gear">Find Gear Manufacturers</a>
+                  <a class="dropdown-item" href="/listings/?t=goods">Find Goods/Services</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="/listings/help">Help</a>
+                </div></li>
+
+                <li class="nav-item d-block d-md-none"><a class="nav-link" href="javascript:;" title="Photos" data-toggle="collapse" data-target="#photoNavItems" data-parent="#mainNav" onclick="$('#photoNavItemsBtn').click().css('background-color', '#333');">
+                  <i class="fa fa-camera"></i> Photos
+                  </a>
+                </li>
+
+                <li class="ml-lg-4 ml-md-3 nav-item dropdown d-none d-md-block">
+                  <a class="nav-link dropdown-toggle" href="/photos/" title="Photos" data-toggle="dropdown">
+                    <span class="d-none d-md-inline-block"><i class="fa fa-camera"></i></span>
+                    <span class="d-inline-block d-md-none d-lg-inline-block">Photos</span>
+                  </a> 
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item loggedin" href="/photos/author.html" style="display: none;">My Photo Gallery</a>
+                    <a class="dropdown-item" href="/photos/">Photo Galleries</a>                    <a class="dropdown-item" href="/photos/thisweek.html">Latest Photos</a>
+                    <a class="dropdown-item" href="/photos/top10.html">Weekly Top 10</a>
+                    <a class="dropdown-item" href="/photos/top200.html">Top 200 Photos</a>
+                    <a class="dropdown-item" href="/articles/photography/">Photo Articles</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/photos/help">Help</a>
+                  </div>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link" href="/videos/" title="Climbing videos">
+                    <span><i class="fa fa-film"></i></span>
+                    <span class="d-inline-block d-md-none d-lg-inline-block">Video</span>
+                  </a>                
+                </li>
+
+                
+                <li class="nav-item d-block d-md-none"><a class="nav-link" href="javascript:;" title="Logbooks" data-toggle="collapse" data-target="#logbookNavItems" data-parent="#mainNav" onclick="$('#logbookNavItemsBtn').click().css('background-color', '#333');">
+                  <svg class="iconlogbook" xmlns="http://www.w3.org/2000/svg" viewBox="9 2.1 18 16">
+            <path d="M11,15.8c0,0,2.1-7.7,2.5-8.4s0.9-0.4,1.4,0.2c0.5,0.6,1.1,1.3,1.1,1.3c0.3,0.3,0.6,0.3,1.1-0.2c0.5-0.5,4.6-4.3,4.6-4.3
+            s0.7-0.8,1.1,0.3c0.4,1.1,2.2,11.1,2.2,11.1s0.1,0.4-0.3,0.4c-0.3,0-13,0-13.3,0C11,16.2,11,15.8,11,15.8z"></path></svg> Logbooks                  </a>
+                </li>
+
+                <li class="nav-item dropdown d-none d-md-block">
+                  <a class="nav-link dropdown-toggle" href="/logbook/" title="Logbooks" data-toggle="dropdown">
+                  <span class="d-none d-md-inline-block"><svg class="iconlogbook" xmlns="http://www.w3.org/2000/svg" viewBox="9 2.1 18 16">
+            <path d="M11,15.8c0,0,2.1-7.7,2.5-8.4s0.9-0.4,1.4,0.2c0.5,0.6,1.1,1.3,1.1,1.3c0.3,0.3,0.6,0.3,1.1-0.2c0.5-0.5,4.6-4.3,4.6-4.3
+            s0.7-0.8,1.1,0.3c0.4,1.1,2.2,11.1,2.2,11.1s0.1,0.4-0.3,0.4c-0.3,0-13,0-13.3,0C11,16.2,11,15.8,11,15.8z"></path></svg></span>
+                  <span class="d-inline-block d-md-none d-lg-inline-block">Logbooks</span>                  
+                  </a> 
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">                      <a class="dropdown-item loggedin" href="/logbook/showlog.php" style="display: none;">My Logbook</a>
+                      <a class="dropdown-item loggedout" href="/logbook/">Search Climb/Crags</a>
+                      <a class="dropdown-item" href="/logbook/map/">Find Crag Map</a>
+                      <a class="dropdown-item" href="/logbook/latest_ascents.php">Latest Ascents</a>                    <a class="dropdown-item" href="/logbook/e.php?d=2018">Activity Diary</a>                      <a class="dropdown-item" href="/logbook/topascents.php">Recent Top Ascents</a>                    <a class="dropdown-item" href="/logbook/books/">Guidebooks</a>                      <a class="dropdown-item" href="/logbook/conditions/">Conditions</a>                   <div class="dropdown-divider"></div>
+                   <a class="dropdown-item" href="/logbook/help">Help</a>
+                  </div>
+                </li>
+
+                <li class="nav-item d-block d-md-none"><a class="nav-link" href="javascript:;" title="Photos" data-toggle="collapse" data-target="#forumNavItems" data-parent="#mainNav" onclick="$('#forumNavItemsBtn').click().css('background-color', '#333');">
+                  <i class="fa fa-comments-o"></i> Forums
+                  </a>
+                </li>
+
+                <li class="nav-item dropdown d-none d-md-block">
+                  <a class="nav-link dropdown-toggle" href="/forums/" title="Forums" data-toggle="dropdown">
+                    <span class="d-none d-md-inline-block"><i class="fa fa-comments-o"></i></span>
+                    <span class="d-inline-block d-md-none d-lg-inline-block">Forums</span>
+                  </a> 
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/forums/">My Forums</a>
+                    <a class="dropdown-item" href="/forums/mytopics.php">My Topics</a>
+                    <a class="dropdown-item" href="/forums/info/search.php">Search Forums</a>
+                    <a class="dropdown-item" href="/forums/i.php?f=16">Premier Posts</a>
+                    <a class="dropdown-item" href="/forums/info/guidelines.html">Posting Guidelines</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/forums/info/help.php">Help</a>
+                  </div>
+                </li>
+                                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/general/search.php" title="Search this site" accesskey="4" data-toggle="dropdown">
+                      <span class="d-none d-sm-inline-block"><i class="fa fa-search"></i></span>
+                      <span class="d-inline-block d-md-none">Search</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <form class="form-inline m-2" role="search" method="get" name="topsearch" action="/general/search.php">
+                      <input name="cof" value="FORID:11" type="hidden"><input name="ie" value="UTF-8" type="hidden"><input name="cx" value="012320157739014986830:zyxmlwsazli" type="hidden"><div class="input-group" style="width:175px"><input class="form-control" name="q" size="25" maxlength="255" value="" type="text"><span class="input-group-btn"><button class="btn btn-default" type="submit" name="sa" style="margin:0"><i class="fa fa-search"></i> </button></span></div><!-- /input-group --></form>
+                      <a class="dropdown-item" href="/general/search.php" title="Search this site">Advanced Search</a>
+                    </div>
+                  </li>                </ul>
+
+              <ul class="nav navbar-nav navbar-right d-none d-md-block">
+                <li class="nav-item loggedout dropdown active">
+                  <a class="nav-link" href="/user/" title="Forums" data-toggle="dropdown">
+                    <strong class="d-lg-none d-xl-inline-block">Login</strong> <i class="fa fa-sign-in"></i>
+                  </a> 
+                  <div class="dropdown-menu dropdown-menu-right" style="padding:0">
+                    <form class="form" method="post" action="/user/" onsubmit="return(verify_login(this))" style="padding:10px; margin:0"><input name="login" value="1" type="hidden">
+                    <div class="input-group" style="margin-bottom:10px">
+                      <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                      <input name="email" placeholder="Username/Email" class="form-control" style="width: 175px; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" required="" type="text">
+                    </div>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                      <input name="password" placeholder="Password" class="form-control" style="width: 175px; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" required="" type="password">
+                    </div>
+                    <div class="checkbox checkbox-primary" style="margin-left:15px">
+                      <input id="user_remember_me" style="float: left; margin-right: 10px;" name="cookie" value="2" type="checkbox">
+                      <label for="user_remember_me"> Remember me</label>
+                    </div>
+
+                    <input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" name="commit" value="Sign In" type="submit">
+                    </form>
+                    <a class="dropdown-item" href="/user/reset.php">I've forgotten my password</a>
+                    <a class="dropdown-item" href="/user/register.php">New User Registration</a>
+                    <a class="dropdown-item" href="/forums/info/registration_help.html">Registration Help</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/forums/info/help.php">Help</a>
+                  </div>
+                </li>
+
+                <li style="display:none" class="nav-item loggedin dropdown active">
+                  <a class="nav-link dropdown-toggle" href="/user/profile.php" title="Forums" data-toggle="dropdown">
+                    <span class="d-none d-md-inline-block"><i class="fa fa-user"></i></span>
+                    <span class="d-inline-block d-md-none d-lg-inline-block">User</span>
+                  </a> 
+                  <ul id="userMenu" class="dropdown-menu dropdown-menu-right" style="padding:0">
+                    <a class="dropdown-item" href="/user/profile.php">My Profile</a>
+                    <a class="dropdown-item" href="/user/options.php">User Options</a>
+                    <a class="dropdown-item" href="/user/options.php?logout=2">Logout from this Location</a>
+                    <a class="dropdown-item" href="/user/options.php?logout=1">Logout Everywhere</a>
+                    <a class="dropdown-item" href="/user/profiles.php">Search Users</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/forums/info/help.php">Help</a>
+                  </ul>
+                 </li>
+               </ul>
+            </div><!-- /.navbar-collapse -->
+            <div class="collapse navbar-collapse" id="photoNavItems">  
+              <ul class="nav navbar-nav navbar-right d-block d-md-none">
+                <li class="nav-item loggedin" style="display: none;"><a class="nav-link" href="/photos/author.html">My Photo Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="/photos/">Photo Galleries</a></li>
+                <li class="nav-item"><a class="nav-link" href="/photos/thisweek.html">Latest Photos</a></li>
+                <li class="nav-item"><a class="nav-link" href="/photos/top10.html">Weekly Top 10</a></li>
+                <li class="nav-item"><a class="nav-link" href="/photos/top200.html">Top 200 Photos</a></li>
+                <li class="nav-item"><a class="nav-link" href="/articles/photography/">Photo Articles</a></li>
+                <li class="nav-item"><a class="nav-link" href="/photos/help">Help</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+
+            <div class="collapse navbar-collapse" id="logbookNavItems"> 
+              <ul class="nav navbar-nav navbar-right d-block d-md-none">                  <li class="nav-item loggedin" style="display: none;"><a class="nav-link" href="/logbook/showlog.html">My Logbook</a></li>
+                  <li class="nav-item loggedout"><a class="nav-link" href="/logbook/">Search Climb/Crags</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/logbook/map/">Find Crag Map</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/logbook/latest_ascents.php">Latest Ascents</a></li>                <li class="nav-item"><a class="nav-link" href="/logbook/e.php?d=2018">Activity Diary</a></li>                  <li class="nav-item"><a class="nav-link" href="/logbook/topascents.html">Recent Top Ascents</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/logbook/conditions/">Conditions</a></li>
+                                <li role="separator" class="divider"></li>
+                <li class="nav-item"><a class="nav-link" href="/logbook/help">Help</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+
+            <div class="collapse navbar-collapse" id="forumNavItems"> 
+              <ul class="nav navbar-nav navbar-right d-block d-md-none">
+                <li class="nav-item"><a class="nav-link" href="/forums/">My Forums</a></li>
+                <li class="nav-item loggedin" style="display: none;"><a class="nav-link" href="/forums/mytopics.php">My Topics</a></li>
+                <li class="nav-item"><a class="nav-link" href="/forums/info/search.php">Search Forums</a></li>
+                <li class="nav-item"><a class="nav-link" href="/forums/i.php?f=16">Premier Posts</a></li>
+                <li class="nav-item"><a class="nav-link" href="/forums/info/guidelines.html">Posting Guidelines</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="nav-item"><a class="nav-link" href="/forums/info/help.php">Help</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+
+                        <div class="collapse navbar-collapse" id="userNavItems"> 
+              <ul class="nav navbar-nav navbar-right d-block d-md-none">
+                <li class="nav-item loggedout">
+                  <form method="post" action="/user/" onsubmit="return(verify_login(this))" style="padding:10px; margin:0"><input name="login" value="1" type="hidden">
+                  <div class="input-group" style="margin-bottom:10px">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input name="email" placeholder="Username/Email" class="form-control" required="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" type="text">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input name="password" placeholder="Password" class="form-control" required="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" type="password">
+                  </div>
+                  <div class="checkbox checkbox-primary" style="margin-left:15px">
+                    <input id="extra_user_remember_me" style="float: left; margin-right: 10px;" name="cookie" value="2" type="checkbox">
+                     <label class="string optional top10" for="extra_user_remember_me" style="color:#888">Remember me</label>
+                  </div>
+
+                  <input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" name="commit" value="Sign In" type="submit">
+                  </form>
+                </li>
+                <li class="nav-item loggedout"><a class="nav-link" href="/user/reset.php">I've forgotten my password</a></li>
+                <li class="nav-item loggedout"><a class="nav-link" href="/user/register.php">New User Registration</a></li>
+                <li class="nav-item loggedin" style="display: none;"><a class="nav-link" href="/user/profile.php">My Profile</a></li>
+                <li class="nav-item loggedin" style="display: none;"><a class="nav-link" href="/user/options.php">User Options</a></li>
+                <li class="nav-item loggedin" style="display: none;"><a class="nav-link" href="/user/options.php?logout=2">Logout from this Location</a></li>
+                <li class="nav-item loggedin" style="display: none;"><a class="nav-link" href="/user/options.php?logout=1">Logout Everywhere</a></li>
+                <li class="nav-item loggedin" style="display: none;"><a class="nav-link" href="/user/profiles.php">Search Users</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="nav-item"><a class="nav-link" href="/forums/info/help">Help</a></li>
+              </ul>
+
+            </div><!-- /.navbar-collapse -->
+          </nav>
+        </div>      </header>
+      <div id="page" class="container pb-3"><div id="main" class="row">  <div class="col-md-9">  </div>
+    <div class="col-md-12"><div class="row">
+<div id="has_sidebar" class="col-md-8"><ol class="breadcrumb">
+      <li><a href="/user/">User</a></li>
+      <li><a href="/user/profiles.php">User Profiles</a></li>
+      <li class="active">Search User Profiles</li>
+    </ol>
+    <p>
+    You can search the database of all 78,643 user profiles. For example, by their name, or town, or a route name, etc.    
+    <script language="JavaScript" type="text/javascript">
+    <!--  to hide script contents from old browsers
+    function verify(f)
+    {
+      msg = "The form was not submitted because of the following error(s):";
+      msg += "Please correct these error(s) and re-submit.";
+      msg += "___________________________________________________";
+      err = "";
+      if (f.keyword.value.length < 2) err += "- Please enter a word to search for"; 
+      if (err == "") return(true);
+      alert(msg + err);
+      return(false);
+    };
+    // end hiding contents  -->
+    </script>
+    </p><form method="get" action="/user/profiles.php" onsubmit="return(verify(this))">    <div class="row top10">
+      <div class="col-sm-4 text-right">Enter search keyword</div>
+      <div class="col-sm-6 text-center">
+        <div class="input-group"><input class="form-control" name="keyword" value="stanage" size="22" type="text">
+          <span class="input-group-btn"><button class="btn btn-primary" type="submit" value="List users"><i class="icon-search"></i> Search users</button></span>
+        </div>
+        <div class="top10">
+          <label><input name="wide" value="0" checked="" type="radio"> Name only</label>&nbsp;&nbsp;<label><input name="wide" value="1" type="radio"> Search whole profile</label>
+        </div>
+      </div>
+    </div></form><div class="alert alert-info">Found 2 matching profiles</div><table width="100%"><tbody><tr><td valign="top"><ul><li> <a href="profile.php?id=78267"><b>stanage</b></a> <i> 06/Nov/14</i></li></ul></td><td valign="top"><ul><li> <a href="profile.php?id=132694">stanagefish</a></li></ul></td></tr></tbody></table>
+</div>
+<div class="col-md-4" id="sidebar">
+<hr class="visible-xs visible-sm" style="margin:10px 0 30px">
+
+<div class="list-group top10">    <a href="/user/" class="list-group-item"><i class="icon-signin"></i> Login as Existing User</a>
+    <a href="/user/reset.php" class="list-group-item"><i class="icon-question"></i> Forgotten Password</a>
+    <a href="/user/register.php" class="list-group-item"><i class="icon-user"></i> Register as New User</a>
+    <a href="/user/newsletters.php" class="list-group-item"><i class="icon-envelope-alt"></i> Newsletters</a>
+    <a href="/forums/info/help.html" class="list-group-item"><i class="icon-question-sign"></i> Help</a></div></div>
+</div></div>
+  </div><!-- End #page -->
+  <footer id="footer" class="container hdr1 mt-3 nocontent clearfix">
+    <hr class="color1">
+    <div class="pt-3">        <a class="text-dark" href="https://advertising.ukclimbing.com/" target="_blank">Advertising on UKClimbing</a> | <a class="text-dark" href="/general/about.html">About UKClimbing</a> | <a class="text-dark" href="https://www.facebook.com/ukclimbing" target="fb"><i class="fa fa-facebook-square p-0"></i> UKC on Facebook</a> | <a class="text-dark" href="https://twitter.com/ukclimbing" target="twtr"><i class="fa fa-twitter-square p-0"></i> UKC on Twitter</a> | <a class="text-dark" href="/general/terms.html" accesskey="8">Terms &amp; Conditions</a> | <a class="text-dark" href="/general/privacy.html">Privacy Policy</a> | <a class="text-dark" href="/general/email.php" accesskey="9">Contact Us</a><br>      Copyright © UKClimbing Limited.    </div>
+  </footer></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://ukc2.com/bower_components/bootstrap-4.0.0-beta.2/dist/js/bootstrap.min.js"></script><script src="https://cdn.ukc2.com/bootstrap/js/main.min.js"></script><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+var GA_LOCAL_STORAGE_KEY = 'ga:clientId';
+
+if (window.localStorage) {
+ga('create', 'UA-2305567-1', {
+  'allowLinker': true,
+  'storage': 'none',
+  'clientId': localStorage.getItem(GA_LOCAL_STORAGE_KEY)
+});
+ga(function(tracker) {
+  localStorage.setItem(GA_LOCAL_STORAGE_KEY, tracker.get('clientId'));
+});
+}
+else {
+ga('create', 'UA-2305567-1', 'auto', {'allowLinker': true});
+}
+ga('require', 'linker');
+ga('linker:autoLink', ['www.ukhillwalking.com']);
+ga('send', 'pageview');</script></div></body></html>
