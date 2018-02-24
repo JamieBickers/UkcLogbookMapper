@@ -7,7 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("LocationMapperTests")]
+[assembly: InternalsVisibleTo("LocationMapper.Tests")]
 [assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
 
 namespace LocationMapper.WebScrapers

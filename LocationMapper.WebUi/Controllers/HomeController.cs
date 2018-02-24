@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using LocationMapper.WebScrapers.Interfaces;
 using LocationMapper.WebUi.ServiceLogic;
-using LocationMapper.Models;
 using System.Diagnostics;
+using LocationMapper.WebUi.Models;
 
 namespace LocationMapper.WebUi.Controllers
 {

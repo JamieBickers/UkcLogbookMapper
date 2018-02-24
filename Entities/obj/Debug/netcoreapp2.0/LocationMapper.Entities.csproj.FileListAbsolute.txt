@@ -1,7 +1,6 @@
 C:\Users\Jamie\Desktop\UkcLogbookMapper\Entities\bin\Debug\netcoreapp2.0\LocationMapper.Entities.deps.json
 C:\Users\Jamie\Desktop\UkcLogbookMapper\Entities\bin\Debug\netcoreapp2.0\LocationMapper.Entities.dll
 C:\Users\Jamie\Desktop\UkcLogbookMapper\Entities\bin\Debug\netcoreapp2.0\LocationMapper.Entities.pdb
-C:\Users\Jamie\Desktop\UkcLogbookMapper\Entities\obj\Debug\netcoreapp2.0\LocationMapper.Entities.csprojResolveAssemblyReference.cache
 C:\Users\Jamie\Desktop\UkcLogbookMapper\Entities\obj\Debug\netcoreapp2.0\LocationMapper.Entities.csproj.CoreCompileInputs.cache
 C:\Users\Jamie\Desktop\UkcLogbookMapper\Entities\obj\Debug\netcoreapp2.0\LocationMapper.Entities.AssemblyInfoInputs.cache
 C:\Users\Jamie\Desktop\UkcLogbookMapper\Entities\obj\Debug\netcoreapp2.0\LocationMapper.Entities.AssemblyInfo.cs

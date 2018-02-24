@@ -13,7 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LocationsMapper\LocationsMapper.csproj" />
+    <ProjectReference Include="..\Entities\LocationMapper.Entities.csproj" />
+    <ProjectReference Include="..\LocationMapper.WebScrapers\LocationMapper.WebScrapers.csproj" />
   </ItemGroup>
 
 </Project>

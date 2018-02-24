@@ -1,11 +1,11 @@
 ﻿using LocationMapper.Entities;
-using LocationMapper.Models;
 using LocationMapper.WebScrapers.Interfaces;
 using LocationMapper.WebUi.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("LocationMapper.Tests")]
+[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
 
 namespace LocationMapper.WebUi.ServiceLogic
 {

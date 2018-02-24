@@ -18,3 +18,5 @@ C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Tests\obj\Debug\netcoreap
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Tests\obj\Debug\netcoreapp2.0\LocationMapper.Tests.AssemblyInfo.cs
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Tests\obj\Debug\netcoreapp2.0\LocationMapper.Tests.dll
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Tests\obj\Debug\netcoreapp2.0\LocationMapper.Tests.pdb
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Tests\bin\Debug\netcoreapp2.0\LocationMapper.WebUi.dll
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Tests\bin\Debug\netcoreapp2.0\LocationMapper.WebUi.pdb
