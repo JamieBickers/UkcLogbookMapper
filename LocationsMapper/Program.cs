@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 //using LocationsMapper.Database;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace LocationsMapper
+namespace LocationMapper
 {
     public class Program
     {

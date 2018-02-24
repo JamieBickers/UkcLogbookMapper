@@ -1,6 +1,6 @@
 using System;
 
-namespace LocationsMapper.Models
+namespace LocationMapper.Models
 {
     public class ErrorViewModel
     {

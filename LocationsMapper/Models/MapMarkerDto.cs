@@ -1,6 +1,6 @@
 ﻿using LocationMapper.Entities;
 
-namespace LocationsMapper.Models
+namespace LocationMapper.Models
 {
     public class MapMarkerDto
     {

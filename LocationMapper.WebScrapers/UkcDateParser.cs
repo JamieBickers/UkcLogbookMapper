@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 [assembly: InternalsVisibleTo("LocationMapperTests")]
 [assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
 
-namespace LocationsMapper.WebScrapers
+namespace LocationMapper.WebScrapers
 {
     static class UkcDateParser
     {

@@ -1,7 +1,7 @@
 ﻿using AngleSharp.Parser.Html;
 using LocationMapper.Entities;
 using LocationMapper.WebScrapers.Interfaces;
-using LocationsMapper.WebScrapers;
+using LocationMapper.WebScrapers;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;

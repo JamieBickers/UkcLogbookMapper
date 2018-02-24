@@ -1,8 +1,8 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using LocationsMapper.WebScrapers;
+using LocationMapper.WebScrapers;
 
-namespace LocationsMapper.Tests
+namespace LocationMapper.Tests
 {
     [TestClass]
     public class UkcDateParserTests
