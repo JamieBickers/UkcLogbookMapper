@@ -27,7 +27,7 @@ namespace LocationsMapper.WebScrapers
                 { "Dec", 12 }
             };
 
-        public static DateTimeOffset CalculateDate(string date)
+        public static DateTimeOffset DeserialiseUkcFormattedDate(this string date)
         {
             // means current year but unknown month
             if (date == "??")

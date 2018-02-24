@@ -352,5 +352,53 @@ namespace LocationMapper.Tests.WebScrapers
 
             Assert.AreEqual(0, actualClimbs.Count());
         }
+
+        [TestMethod]
+        public void GetRoughCragLocation_ExistingCrag_ExpectCragLocationReturned()
+        {
+            var cragPage = documentReader.ReadDocument("StanageLogbookPage.txt");
+
+            var location = (County: "Derbyshire", Country: "England");
+
+            var mockPageReader = new Mock<IUkcPageReader>();
+            mockPageReader
+                .Setup(pageReader => pageReader.GetCragPage(104))
+                .Returns(cragPage);
+
+            var mockPageParser = new Mock<IUkcPageParser>();
+            mockPageParser
+                .Setup(pageParser => pageParser.TryGetRoughCragLocation(cragPage, out location))
+                .Returns(true);
+
+            ukcReader = new UkcReader(mockPageReader.Object, mockPageParser.Object);
+
+            var actualLocation = ukcReader.GetRoughCragLocation(104);
+
+            Assert.AreEqual(location, actualLocation);
+        }
+
+        [TestMethod]
+        public void GetRoughCragLocation_CragDoesNotExist_ExpectNull()
+        {
+            var cragPage = documentReader.ReadDocument("StanageLogbookPage.txt");
+
+            var location = (County: (string)null, Country: (string)null);
+
+            var mockPageReader = new Mock<IUkcPageReader>();
+            mockPageReader
+                .Setup(pageReader => pageReader.GetCragPage(104))
+                .Returns(cragPage);
+
+            var mockPageParser = new Mock<IUkcPageParser>();
+            mockPageParser
+                .Setup(pageParser => pageParser.TryGetRoughCragLocation(cragPage, out location))
+                .Returns(true);
+
+            ukcReader = new UkcReader(mockPageReader.Object, mockPageParser.Object);
+
+            var actualLocation = ukcReader.GetRoughCragLocation(104);
+
+            Assert.AreEqual(location, actualLocation);
+        }
     }
 }

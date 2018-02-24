@@ -53,7 +53,7 @@ namespace LocationMapper.WebScrapers
             {
                 ClimbName = data.name,
                 Grade = data.grade,
-                Date = UkcDateParser.CalculateDate(data.date),
+                Date = data.date.DeserialiseUkcFormattedDate(),
                 CragName = data.crag,
                 CragId = FindCragIdInLink(data.cragLink)
             });
