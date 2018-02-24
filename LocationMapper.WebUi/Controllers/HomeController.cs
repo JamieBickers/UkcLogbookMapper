@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using LocationMapper.WebScrapers.Interfaces;
+using LocationMapper.WebUi.ServiceLogic;
+using LocationMapper.Models;
+using System.Diagnostics;
 
 namespace LocationMapper.WebUi.Controllers
 {
@@ -7,11 +10,14 @@ namespace LocationMapper.WebUi.Controllers
     {
         private IUkcReader ukcReader;
         private ICragLocator cragLocator;
+        private MapPlotter mapPlotter;
 
         public HomeController(IUkcReader ukcReader, ICragLocator cragLocator)
         {
             this.ukcReader = ukcReader;
             this.cragLocator = cragLocator;
+
+            mapPlotter = new MapPlotter(cragLocator, ukcReader);
         }
 
         public IActionResult Index()
@@ -21,7 +27,13 @@ namespace LocationMapper.WebUi.Controllers
 
         public IActionResult Map(string ukcUserName)
         {
-            return View();
+            var locations = mapPlotter.FindLocationsUserHasClimbed(ukcUserName);
+            return View(locations);
+        }
+
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

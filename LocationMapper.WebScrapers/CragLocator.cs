@@ -1,5 +1,4 @@
 ﻿using LocationMapper.Entities;
-using LocationMapper.Interfaces.WebScrapers;
 using LocationMapper.WebScrapers.Interfaces;
 using System.Collections.Generic;
 using System.Linq;

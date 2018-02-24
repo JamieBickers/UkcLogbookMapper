@@ -1,8 +1,7 @@
-﻿@*@{
-    Layout = null;
+﻿@model List<MapMarkerDto>
+@{
+    ViewData["Title"] = "Map";
 }
-
-@model IEnumerable<LocationsMapper.Models.MapMarkerDto>
 
 <!DOCTYPE html>
 
@@ -16,8 +15,7 @@
     </style>
 </head>
 <body>
-    <p><a href="./">Home Page</a></p>
-    <div id="map"></div>
+    <div id="map" class="centre"></div>
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script>
         function initMap() {
@@ -37,11 +35,26 @@
                     'map': map,
                     'title': item.PlaceName
                 })
-            });   
+            });
         }
     </script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbwGGr4DAAb-BwnLjrS3jEjRNepZSCLUM&callback=initMap">
     </script>
 </body>
-</html>*@
+</html>
+
+<style>
+    /*https://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-for-all-browsers*/
+    .centre {
+        width: 50%;
+        height: 50%;
+        overflow: auto;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+</style>

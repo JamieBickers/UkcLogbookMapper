@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LocationMapper.WebScrapers;
+using LocationMapper.WebScrapers.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -22,6 +24,8 @@ namespace LocationMapper.WebUi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddTransient<IUkcReader, UkcReader>();
+            services.AddTransient<ICragLocator, CragLocator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

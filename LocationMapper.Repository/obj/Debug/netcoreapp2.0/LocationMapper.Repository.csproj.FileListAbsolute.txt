@@ -1,11 +1,11 @@
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\LocationMapper.Repository.deps.json
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\LocationMapper.Repository.dll
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\LocationMapper.Repository.pdb
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\LocationMapper.Entities.dll
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\LocationMapper.Entities.pdb
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\obj\Debug\netcoreapp2.0\LocationMapper.Repository.csprojResolveAssemblyReference.cache
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\obj\Debug\netcoreapp2.0\LocationMapper.Repository.csproj.CoreCompileInputs.cache
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\obj\Debug\netcoreapp2.0\LocationMapper.Repository.AssemblyInfoInputs.cache
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\obj\Debug\netcoreapp2.0\LocationMapper.Repository.AssemblyInfo.cs
-C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\LocationMapper.Repository.deps.json
-C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\LocationMapper.Repository.dll
-C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\LocationMapper.Repository.pdb
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\obj\Debug\netcoreapp2.0\LocationMapper.Repository.dll
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\obj\Debug\netcoreapp2.0\LocationMapper.Repository.pdb
-C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\LocationMapper.Entities.dll
-C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.Repository\bin\Debug\netcoreapp2.0\LocationMapper.Entities.pdb

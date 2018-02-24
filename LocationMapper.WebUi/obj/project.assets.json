@@ -13197,7 +13197,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "LocationMapper.WebScrapers >= 1.0.0",
       "LocationsMapper >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.5",
       "Microsoft.NETCore.App >= 2.0.0"
@@ -13238,9 +13237,6 @@
           "projectReferences": {
             "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\LocationsMapper\\LocationsMapper.csproj": {
               "projectPath": "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\LocationsMapper\\LocationsMapper.csproj"
-            },
-            "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\LocationMapper.WebScrapers\\LocationMapper.WebScrapers.csproj": {
-              "projectPath": "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\LocationMapper.WebScrapers\\LocationMapper.WebScrapers.csproj"
             }
           }
         }
