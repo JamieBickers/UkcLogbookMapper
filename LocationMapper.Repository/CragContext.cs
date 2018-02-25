@@ -11,11 +11,11 @@ namespace LocationMapper.Repository
         {
         }
 
-        public DbSet<Crag> crag { get; set; }
+        public DbSet<Crag> Crag { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Crag>().HasKey(crag => crag.id);
+            builder.Entity<Crag>().HasKey(crag => crag.ID);
 
             base.OnModelCreating(builder);
         }

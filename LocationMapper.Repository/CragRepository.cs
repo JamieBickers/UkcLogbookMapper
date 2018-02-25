@@ -17,12 +17,12 @@ namespace LocationMapper.Repository
 
         public Crag GetCrag(int ukcCragId)
         {
-            return cragContext.crag.FirstOrDefault(crag => crag.ukccragid == ukcCragId);
+            return cragContext.Crag.FirstOrDefault(crag => crag.UkcCragId == ukcCragId);
         }
 
         public void AddCrag(Crag crag)
         {
-            cragContext.crag.Add(crag);
+            cragContext.Crag.Add(crag);
         }
     }
 }

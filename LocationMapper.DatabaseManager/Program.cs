@@ -9,13 +9,10 @@ namespace LocationMapper.DatabaseManager
     {
         static void Main(string[] args)
         {
-            var connString = "Host=localhost;Username=UkcLogbookMapper;Password=qwerty;Database=Ukc";
-            var dbOptions = new DbContextOptionsBuilder<CragContext>();
-            dbOptions.UseNpgsql(connString);
-            var cragContext = new CragContext(dbOptions.Options);
-            var cragRepo = new CragRepository(cragContext);
+            var connectionString = "Host=localhost;Username=UkcLogbookMapper;Password=qwerty;Database=Ukc";
+            var cragRepository = CragRepositoryFactory.GetCragRepository(connectionString);
 
-            var crag = cragRepo.GetCrag(1);
+            var crag = cragRepository.GetCrag(1);
         }
     }
 }

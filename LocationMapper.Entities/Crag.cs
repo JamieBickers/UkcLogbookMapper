@@ -2,11 +2,11 @@
 {
     public class Crag
     {
-        public int id { get; set; }
-        public int ukccragid { get; set; }
-        public string cragname { get; set; }
-        public decimal latitude { get; set; }
-        public decimal longitude { get; set; }
-        public bool exactlocation { get; set; }
+        public int ID { get; set; }
+        public int UkcCragId { get; set; }
+        public string CragName { get; set; }
+        public decimal Latitude { get; set; }
+        public decimal Longitude { get; set; }
+        public bool ExactLocation { get; set; }
     }
 }
