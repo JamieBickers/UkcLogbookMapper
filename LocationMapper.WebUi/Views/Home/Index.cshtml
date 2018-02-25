@@ -6,15 +6,35 @@
     <p>
         Enter your UKC user name
         <input class="input-sm" id="username-input">
-        <button id="go-to-map">Go!</button>
+        <button id="go-to-map-username">Go!</button>
     </p>
+    <div hidden id="show-if-username-failed">
+        <p>Name not found, try entering your user ID instead</p>
+        <input class="input-sm" id="userid-input" />
+        <button id="go-to-map-userid">Go!</button>
+    </div>
 </div>
 
 <script>
-    document.getElementById("go-to-map")
+    document.getElementById("go-to-map-username")
         .onclick = function () {
             const userName = document.getElementById("username-input").value;
-            window.location.href = "@Url.Action("Map", "Home")" + `?ukcUserName=${userName}`;
+
+            fetch(`home/TryFindUser?ukcUserName=${userName}`).then(function (response) {
+                console.log(response.status);
+                if (response.ok) {
+                    window.location.href = `${"@Url.Action("MapName", "Home")"}?ukcUserName=${userName}`;
+                }
+                else {
+                    document.getElementById("show-if-username-failed").removeAttribute("hidden");
+                }
+            });
+        };
+
+    document.getElementById("go-to-map-userid")
+        .onclick = function () {
+            const userId = document.getElementById("userid-input").value;
+            window.location.href = `${"@Url.Action("MapId", "Home")"}?ukcUserId=${userId}`;
         };
 </script>
 

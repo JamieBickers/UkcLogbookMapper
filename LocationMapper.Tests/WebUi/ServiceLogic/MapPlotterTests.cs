@@ -19,6 +19,8 @@ namespace LocationMapper.Tests.WebUi.ServiceLogic
         [TestMethod]
         public void FindLocationsUserHasClimbed_ClimbsCanBeFoundExactly_ExpectClimbsFound()
         {
+            var userId = 212307;
+
             var mapLocation1 = new MapLocation()
             {
                 Latitude = 10,
@@ -33,7 +35,7 @@ namespace LocationMapper.Tests.WebUi.ServiceLogic
 
             var mockUkcReader = new Mock<IUkcReader>();
             mockUkcReader
-                .Setup(ukcReader => ukcReader.GetAllClimbs("jmab"))
+                .Setup(ukcReader => ukcReader.GetAllClimbs(212307))
                 .Returns(new List<LogbookEntry>()
                 {
                     new LogbookEntry()
@@ -47,6 +49,10 @@ namespace LocationMapper.Tests.WebUi.ServiceLogic
                         CragId = 2
                     }
                 });
+
+            mockUkcReader
+                .Setup(ukcReader => ukcReader.TryGetUserId("jmab", out userId))
+                .Returns(true);
 
             var mockCragLocator = new Mock<ICragLocator>();
             mockCragLocator
@@ -69,6 +75,8 @@ namespace LocationMapper.Tests.WebUi.ServiceLogic
         [TestMethod]
         public void FindLocationsUserHasClimbed_ClimbsCannotBeFoundExactly_ExpectClimbsFound()
         {
+            var userId = 212307;
+
             var mapLocation1 = new MapLocation()
             {
                 Latitude = 10,
@@ -83,7 +91,7 @@ namespace LocationMapper.Tests.WebUi.ServiceLogic
 
             var mockUkcReader = new Mock<IUkcReader>();
             mockUkcReader
-                .Setup(ukcReader => ukcReader.GetAllClimbs("jmab"))
+                .Setup(ukcReader => ukcReader.GetAllClimbs(212307))
                 .Returns(new List<LogbookEntry>()
                 {
                     new LogbookEntry()
@@ -101,6 +109,10 @@ namespace LocationMapper.Tests.WebUi.ServiceLogic
             mockUkcReader
                 .Setup(ukcReader => ukcReader.GetRoughCragLocation(2))
                 .Returns(("Oxfordshire", "England"));
+
+            mockUkcReader
+                .Setup(ukcReader => ukcReader.TryGetUserId("jmab", out userId))
+                .Returns(true);
 
             var mockCragLocator = new Mock<ICragLocator>();
             mockCragLocator
@@ -131,7 +143,7 @@ namespace LocationMapper.Tests.WebUi.ServiceLogic
 
             var mockUkcReader = new Mock<IUkcReader>();
             mockUkcReader
-                .Setup(ukcReader => ukcReader.GetAllClimbs("jmab"))
+                .Setup(ukcReader => ukcReader.GetAllClimbs(212307))
                 .Returns(new List<LogbookEntry>()
                 {
                     new LogbookEntry()
@@ -154,7 +166,7 @@ namespace LocationMapper.Tests.WebUi.ServiceLogic
 
             var result = mapPlotter.FindLocationsUserHasClimbed("jmab");
 
-            Assert.AreEqual(0, result.Count());
+            Assert.AreEqual(0, result?.Count() ?? 0);
         }
     }
 }

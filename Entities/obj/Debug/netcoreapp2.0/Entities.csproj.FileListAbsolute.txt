@@ -1,9 +1,0 @@
-C:\Users\Jamie\Desktop\UkcLogbookMapper\Entities\bin\Debug\netcoreapp2.0\Entities.deps.json
-C:\Users\Jamie\Desktop\UkcLogbookMapper\Entities\bin\Debug\netcoreapp2.0\Entities.dll
-C:\Users\Jamie\Desktop\UkcLogbookMapper\Entities\bin\Debug\netcoreapp2.0\Entities.pdb
-C:\Users\Jamie\Desktop\UkcLogbookMapper\Entities\obj\Debug\netcoreapp2.0\Entities.csproj.CoreCompileInputs.cache
-C:\Users\Jamie\Desktop\UkcLogbookMapper\Entities\obj\Debug\netcoreapp2.0\Entities.AssemblyInfoInputs.cache
-C:\Users\Jamie\Desktop\UkcLogbookMapper\Entities\obj\Debug\netcoreapp2.0\Entities.AssemblyInfo.cs
-C:\Users\Jamie\Desktop\UkcLogbookMapper\Entities\obj\Debug\netcoreapp2.0\Entities.dll
-C:\Users\Jamie\Desktop\UkcLogbookMapper\Entities\obj\Debug\netcoreapp2.0\Entities.pdb
-C:\Users\Jamie\Desktop\UkcLogbookMapper\Entities\obj\Debug\netcoreapp2.0\Entities.csprojResolveAssemblyReference.cache

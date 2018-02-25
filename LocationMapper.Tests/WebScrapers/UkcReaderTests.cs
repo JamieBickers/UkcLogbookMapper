@@ -57,7 +57,7 @@ namespace LocationMapper.Tests.WebScrapers
 
             ukcReader = new UkcReader(mockPageReader.Object, mockPageParser.Object);
 
-            var actualClimbs = ukcReader.GetAllClimbs("jmab");
+            var actualClimbs = ukcReader.GetAllClimbs(212307);
 
             Assert.AreEqual(3, actualClimbs.Count());
         }
@@ -118,7 +118,7 @@ namespace LocationMapper.Tests.WebScrapers
 
             ukcReader = new UkcReader(mockPageReader.Object, mockPageParser.Object);
 
-            var actualClimbs = ukcReader.GetAllClimbs("jmab");
+            var actualClimbs = ukcReader.GetAllClimbs(212307);
 
             Assert.AreEqual(7, actualClimbs.Count());
         }
@@ -186,7 +186,7 @@ namespace LocationMapper.Tests.WebScrapers
 
             ukcReader = new UkcReader(mockPageReader.Object, mockPageParser.Object);
 
-            var actualClimbs = ukcReader.GetAllClimbs("jmab");
+            var actualClimbs = ukcReader.GetAllClimbs(212307);
 
             Assert.AreEqual(7, actualClimbs.Count());
         }
@@ -257,7 +257,7 @@ namespace LocationMapper.Tests.WebScrapers
 
             ukcReader = new UkcReader(mockPageReader.Object, mockPageParser.Object);
 
-            var actualClimbs = ukcReader.GetAllClimbs("jmab");
+            var actualClimbs = ukcReader.GetAllClimbs(212307);
 
             Assert.AreEqual(7, actualClimbs.Count());
         }
@@ -302,9 +302,9 @@ namespace LocationMapper.Tests.WebScrapers
 
             ukcReader = new UkcReader(mockPageReader.Object, mockPageParser.Object);
 
-            var actualClimbs = ukcReader.GetAllClimbs("jmab");
+            var actualClimbs = ukcReader.GetAllClimbs(212307);
 
-            Assert.IsNull(actualClimbs);
+            Assert.AreEqual(0, actualClimbs?.Count() ?? 0);
         }
 
         [TestMethod]
@@ -348,7 +348,7 @@ namespace LocationMapper.Tests.WebScrapers
 
             ukcReader = new UkcReader(mockPageReader.Object, mockPageParser.Object);
 
-            var actualClimbs = ukcReader.GetAllClimbs("jmab");
+            var actualClimbs = ukcReader.GetAllClimbs(212307);
 
             Assert.AreEqual(0, actualClimbs.Count());
         }
@@ -399,6 +399,50 @@ namespace LocationMapper.Tests.WebScrapers
             var actualLocation = ukcReader.GetRoughCragLocation(104);
 
             Assert.AreEqual(location, actualLocation);
+        }
+
+        [TestMethod]
+        public void TryGetuserId_UserIsFound_ExpectUserIdReturned()
+        {
+            var userIdAsString = "212307";
+
+            var pageReader = new Mock<IUkcPageReader>();
+            pageReader
+                .Setup(reader => reader.GetSearchPage("jmab"))
+                .Returns("somePage");
+
+            var pageParser = new Mock<IUkcPageParser>();
+            pageParser
+                .Setup(parser => parser.TryGetUserIdOnSearchPage("somePage", out userIdAsString))
+                .Returns(true);
+
+            ukcReader = new UkcReader(pageReader.Object, pageParser.Object);
+            var result = ukcReader.TryGetUserId("jmab", out var userId);
+
+            Assert.IsTrue(result);
+            Assert.AreEqual(212307, userId);
+        }
+
+        [TestMethod]
+        public void TryGetuserId_UserIsNotFound_ExpectNotFound()
+        {
+            var userIdAsString = (string)null;
+
+            var pageReader = new Mock<IUkcPageReader>();
+            pageReader
+                .Setup(reader => reader.GetSearchPage("jmab"))
+                .Returns("somePage");
+
+            var pageParser = new Mock<IUkcPageParser>();
+            pageParser
+                .Setup(parser => parser.TryGetUserIdOnSearchPage("somePage", out userIdAsString))
+                .Returns(false);
+
+            ukcReader = new UkcReader(pageReader.Object, pageParser.Object);
+            var result = ukcReader.TryGetUserId("jmab", out var userId);
+
+            Assert.IsFalse(result);
+            Assert.AreEqual(0, userId);
         }
     }
 }

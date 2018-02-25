@@ -3,6 +3,8 @@ using LocationMapper.WebScrapers.Interfaces;
 using LocationMapper.WebUi.ServiceLogic;
 using System.Diagnostics;
 using LocationMapper.WebUi.Models;
+using System;
+using Microsoft.Extensions.Options;
 
 namespace LocationMapper.WebUi.Controllers
 {
@@ -25,15 +27,33 @@ namespace LocationMapper.WebUi.Controllers
             return View();
         }
 
-        public IActionResult Map(string ukcUserName)
+        public IActionResult MapName(string ukcUserName)
         {
             var locations = mapPlotter.FindLocationsUserHasClimbed(ukcUserName);
-            return View(locations);
+            return View("Map", locations);
+        }
+
+        public IActionResult MapId(int ukcUserId)
+        {
+            var locations = mapPlotter.FindLocationsUserHasClimbed(ukcUserId);
+            return View("Map", locations);
         }
 
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult TryFindUser(string ukcUserName)
+        {
+            if (ukcReader.TryGetUserId(ukcUserName, out var userId))
+            {
+                return Ok(userId);
+            }
+            else
+            {
+                return StatusCode(404);
+            }
         }
     }
 }

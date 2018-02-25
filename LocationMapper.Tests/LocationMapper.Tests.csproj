@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Entities\LocationMapper.Entities.csproj" />
+    <ProjectReference Include="..\LocationMapper.Entities\LocationMapper.Entities.csproj" />
     <ProjectReference Include="..\LocationMapper.WebScrapers\LocationMapper.WebScrapers.csproj" />
     <ProjectReference Include="..\LocationMapper.WebUi\LocationMapper.WebUi.csproj" />
   </ItemGroup>

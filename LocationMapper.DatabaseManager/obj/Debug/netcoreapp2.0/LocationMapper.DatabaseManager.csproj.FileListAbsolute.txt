@@ -1,0 +1,15 @@
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\bin\Debug\netcoreapp2.0\LocationMapper.DatabaseManager.deps.json
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\bin\Debug\netcoreapp2.0\LocationMapper.DatabaseManager.runtimeconfig.json
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\bin\Debug\netcoreapp2.0\LocationMapper.DatabaseManager.runtimeconfig.dev.json
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\bin\Debug\netcoreapp2.0\LocationMapper.DatabaseManager.dll
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\bin\Debug\netcoreapp2.0\LocationMapper.DatabaseManager.pdb
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\bin\Debug\netcoreapp2.0\LocationMapper.Entities.dll
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\bin\Debug\netcoreapp2.0\LocationMapper.Repository.dll
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\bin\Debug\netcoreapp2.0\LocationMapper.Entities.pdb
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\bin\Debug\netcoreapp2.0\LocationMapper.Repository.pdb
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\obj\Debug\netcoreapp2.0\LocationMapper.DatabaseManager.csprojResolveAssemblyReference.cache
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\obj\Debug\netcoreapp2.0\LocationMapper.DatabaseManager.csproj.CoreCompileInputs.cache
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\obj\Debug\netcoreapp2.0\LocationMapper.DatabaseManager.AssemblyInfoInputs.cache
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\obj\Debug\netcoreapp2.0\LocationMapper.DatabaseManager.AssemblyInfo.cs
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\obj\Debug\netcoreapp2.0\LocationMapper.DatabaseManager.dll
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\obj\Debug\netcoreapp2.0\LocationMapper.DatabaseManager.pdb

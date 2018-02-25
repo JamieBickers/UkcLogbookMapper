@@ -20,9 +20,9 @@ namespace LocationMapper.WebUi.ServiceLogic
             this.ukcReader = ukcReader;
         }
 
-        public IEnumerable<MapMarkerDto> FindLocationsUserHasClimbed(string userName)
+        public IEnumerable<MapMarkerDto> FindLocationsUserHasClimbed(int userId)
         {
-            var climbs = ukcReader.GetAllClimbs(userName);
+            var climbs = ukcReader.GetAllClimbs(userId);
             var mapMarkers = new List<MapMarkerDto>();
 
             foreach (var climb in climbs)
@@ -39,6 +39,18 @@ namespace LocationMapper.WebUi.ServiceLogic
             }
 
             return mapMarkers;
+        }
+
+        public IEnumerable<MapMarkerDto> FindLocationsUserHasClimbed(string userName)
+        {
+            if (ukcReader.TryGetUserId(userName, out var userId))
+            {
+                return FindLocationsUserHasClimbed(userId);
+            }
+            else
+            {
+                return null;
+            }
         }
 
         private bool TryFindCragLocation(string cragName, int cragId, out MapLocation location)

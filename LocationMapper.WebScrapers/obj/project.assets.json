@@ -4845,8 +4845,8 @@
     },
     "LocationMapper.Entities/1.0.0": {
       "type": "project",
-      "path": "../Entities/LocationMapper.Entities.csproj",
-      "msbuildProject": "../Entities/LocationMapper.Entities.csproj"
+      "path": "../LocationMapper.Entities/LocationMapper.Entities.csproj",
+      "msbuildProject": "../LocationMapper.Entities/LocationMapper.Entities.csproj"
     },
     "LocationMapper.Repository/1.0.0": {
       "type": "project",
@@ -4896,8 +4896,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\Entities\\LocationMapper.Entities.csproj": {
-              "projectPath": "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\Entities\\LocationMapper.Entities.csproj"
+            "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\LocationMapper.Entities\\LocationMapper.Entities.csproj": {
+              "projectPath": "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\LocationMapper.Entities\\LocationMapper.Entities.csproj"
             },
             "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\LocationMapper.Repository\\LocationMapper.Repository.csproj": {
               "projectPath": "C:\\Users\\Jamie\\Desktop\\UkcLogbookMapper\\LocationMapper.Repository\\LocationMapper.Repository.csproj"

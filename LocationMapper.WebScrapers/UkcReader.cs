@@ -26,15 +26,10 @@ namespace LocationMapper.WebScrapers
             this.pageParser = pageParser;
         }
 
-        public IEnumerable<LogbookEntry> GetAllClimbs(string userName)
+        public IEnumerable<LogbookEntry> GetAllClimbs(int userId)
         {
             // Keep track of viewed pages to detect loops.
             var pages = new List<string>();
-
-            if (!TryGetUserId(userName, out var userId))
-            {
-                return null;
-            }
 
             IEnumerable<LogbookEntry> climbs = new List<LogbookEntry>();
 
@@ -76,7 +71,7 @@ namespace LocationMapper.WebScrapers
             }
         }
 
-        private bool TryGetUserId(string userName, out int userId)
+        public bool TryGetUserId(string userName, out int userId)
         {
             var page = pageReader.GetSearchPage(userName);
             

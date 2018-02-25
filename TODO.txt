@@ -1,1 +1,1 @@
-Get pages concurrently, use HttpClient not WebClient
+Get pages concurrently, use HttpClient not WebClient.
