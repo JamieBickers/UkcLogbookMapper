@@ -41,7 +41,7 @@ namespace LocationMapper.Tests.IntegrationTests
         public void HomeControllerMap_UsingExistingUser_ExpectNoExceptionsThrownAndNotNull()
         {
             var controller = new HomeController(new UkcReader(), new CragLocator());
-            var result = controller.Map("jmab");
+            var result = controller.MapName("jmab");
             Assert.IsNotNull(result);
         }
 
@@ -49,7 +49,7 @@ namespace LocationMapper.Tests.IntegrationTests
         public void HomeControllerMap_UserDoesNotExist_ExpectNoException()
         {
             var controller = new HomeController(new UkcReader(), new CragLocator());
-            var result = controller.Map("dfsdfsdfsghidsgfhjdsfds");
+            var result = controller.MapName("dfsdfsdfsghidsgfhjdsfds");
             Assert.IsNotNull(result);
         }
 

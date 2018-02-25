@@ -3,22 +3,19 @@ using System.Linq;
 using LocationMapper.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace DataAccessPostgreSqlProvider
+namespace LocationMapper.Repository
 {
-    public class DomainModelPostgreSqlContext : DbContext
+    public class CragContext : DbContext
     {
-        public DomainModelPostgreSqlContext(DbContextOptions<DomainModelPostgreSqlContext> options) : base(options)
+        public CragContext(DbContextOptions<CragContext> options) : base(options)
         {
         }
 
-        public DbSet<CragLocation> DataEventRecords { get; set; }
+        public DbSet<Crag> crag { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<CragLocation>().HasKey(cragLocation => cragLocation.ID);
-
-            // shadow properties
-            builder.Entity<CragLocation>().Property<DateTime>("UpdatedTimestamp");
+            builder.Entity<Crag>().HasKey(crag => crag.id);
 
             base.OnModelCreating(builder);
         }
@@ -27,7 +24,7 @@ namespace DataAccessPostgreSqlProvider
         {
             ChangeTracker.DetectChanges();
 
-            UpdateUpdatedProperty<CragLocation>();
+            UpdateUpdatedProperty<Crag>();
 
             return base.SaveChanges();
         }

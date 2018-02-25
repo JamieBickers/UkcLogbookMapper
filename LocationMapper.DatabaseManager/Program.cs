@@ -1,4 +1,6 @@
-﻿using Npgsql;
+﻿using LocationMapper.Repository;
+using Microsoft.EntityFrameworkCore;
+using Npgsql;
 using System;
 
 namespace LocationMapper.DatabaseManager
@@ -8,21 +10,12 @@ namespace LocationMapper.DatabaseManager
         static void Main(string[] args)
         {
             var connString = "Host=localhost;Username=UkcLogbookMapper;Password=qwerty;Database=Ukc";
+            var dbOptions = new DbContextOptionsBuilder<CragContext>();
+            dbOptions.UseNpgsql(connString);
+            var cragContext = new CragContext(dbOptions.Options);
+            var cragRepo = new CragRepository(cragContext);
 
-            using (var conn = new NpgsqlConnection(connString))
-            {
-                conn.Open();
-
-                // Retrieve all rows
-                using (var cmd = new NpgsqlCommand("SELECT * FROM crag", conn))
-                using (var reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Console.WriteLine(reader.GetString(2));
-                    }
-                }
-            }
+            var crag = cragRepo.GetCrag(1);
         }
     }
 }
