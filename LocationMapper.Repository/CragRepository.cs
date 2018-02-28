@@ -23,6 +23,7 @@ namespace LocationMapper.Repository
         public void AddCrag(Crag crag)
         {
             cragContext.Crag.Add(crag);
+            cragContext.SaveChanges();
         }
     }
 }

@@ -13,3 +13,5 @@ C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\obj\Debug
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\obj\Debug\netcoreapp2.0\LocationMapper.DatabaseManager.AssemblyInfo.cs
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\obj\Debug\netcoreapp2.0\LocationMapper.DatabaseManager.dll
 C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\obj\Debug\netcoreapp2.0\LocationMapper.DatabaseManager.pdb
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\bin\Debug\netcoreapp2.0\LocationMapper.WebScrapers.dll
+C:\Users\Jamie\Desktop\UkcLogbookMapper\LocationMapper.DatabaseManager\bin\Debug\netcoreapp2.0\LocationMapper.WebScrapers.pdb
