@@ -1,4 +1,6 @@
 ﻿using LocationMapper.Entities;
+using LocationMapper.Repository;
+using LocationMapper.WebScrapers.Entities;
 using LocationMapper.WebScrapers.Interfaces;
 using LocationMapper.WebUi.Models;
 using System.Collections.Generic;
@@ -11,13 +13,15 @@ namespace LocationMapper.WebUi.ServiceLogic
 {
     class MapPlotter
     {
-        private ICragLocator cragLocator;
         private IUkcReader ukcReader;
+        private ICragRepository cragRepository;
+        private ICragLocator cragLocator;
 
-        public MapPlotter(ICragLocator cragLocator, IUkcReader ukcReader)
+        public MapPlotter(IUkcReader ukcReader, ICragRepository cragRepository, ICragLocator cragLocator)
         {
-            this.cragLocator = cragLocator;
             this.ukcReader = ukcReader;
+            this.cragRepository = cragRepository;
+            this.cragLocator = cragLocator;
         }
 
         public IEnumerable<MapMarkerDto> FindLocationsUserHasClimbed(int userId)
@@ -27,15 +31,24 @@ namespace LocationMapper.WebUi.ServiceLogic
 
             foreach (var climb in climbs)
             {
-                if (TryFindCragLocation(climb.CragName, climb.CragId, out var location))
+                var crag = GetCrag(climb.UkcCragId);
+                if (crag.Location == null)
                 {
-                    mapMarkers.Add(new MapMarkerDto()
+                    if (cragLocator.TryFindCrag(crag.CragName, out var location))
                     {
-                        ClimbName = climb.ClimbName,
-                        Grade = climb.Grade,
-                        Location = location
-                    });
+                        crag.Location = location;
+                    }
+                    else if (cragLocator.TryFindCrag(crag.County, crag.Country, out location))
+                    {
+                        crag.Location = location;
+                    }
                 }
+                mapMarkers.Add(new MapMarkerDto()
+                {
+                    ClimbName = climb.ClimbName,
+                    Grade = climb.Grade,
+                    Location = crag?.Location
+                });
             }
 
             return mapMarkers;
@@ -53,23 +66,25 @@ namespace LocationMapper.WebUi.ServiceLogic
             }
         }
 
-        private bool TryFindCragLocation(string cragName, int cragId, out MapLocation location)
+        private UkcCrag GetCrag(int ukcCragId)
         {
-            if (cragLocator.TryFindCrag(cragName, out location))
+            var crag = cragRepository.GetCrag(ukcCragId);
+            if (crag == null)
             {
-                return true;
+                return ukcReader.GetCragData(ukcCragId);
             }
             else
             {
-                var (County, Country) = ukcReader.GetRoughCragLocation(cragId);
-                if (cragLocator.TryFindCrag(County, Country, out location))
+                return new UkcCrag()
                 {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                    CragName = crag.CragName,
+                    UkcCragId = crag.UkcCragId,
+                    Location = new MapLocation()
+                    {
+                        Latitude = crag.Latitude ?? 0,
+                        Longitude = crag.Longitude ?? 0
+                    }
+                };
             }
         }
     }

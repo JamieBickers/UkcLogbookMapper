@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
+using LocationMapper.WebScrapers.Entities;
+using System;
+using AngleSharp.Dom;
 
 [assembly: InternalsVisibleTo("LocationMapper.Tests")]
 [assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
@@ -45,7 +48,6 @@ namespace LocationMapper.WebScrapers
                 name = row.FirstOrDefault(column => column.ClassName == "climb")?.Children?.FirstOrDefault()?.InnerHtml,
                 grade = row.FirstOrDefault(column => column.ClassName == "grade")?.InnerHtml,
                 date = row.FirstOrDefault(column => column.ClassName == "logdate text-center")?.InnerHtml,
-                crag = row.ToList().ElementAtOrDefault(6)?.Children?.FirstOrDefault()?.InnerHtml, // the crag is the 7th column
                 cragLink = row.ToList().ElementAtOrDefault(6)?.InnerHtml
             })
             .Where(data => data.name != null && data.name != "")
@@ -54,8 +56,7 @@ namespace LocationMapper.WebScrapers
                 ClimbName = data.name,
                 Grade = data.grade,
                 Date = data.date.DeserialiseUkcFormattedDate(),
-                CragName = data.crag,
-                CragId = FindCragIdInLink(data.cragLink)
+                UkcCragId = FindCragIdInLink(data.cragLink)
             });
 
             if (climbs.Count() > 0)
@@ -68,44 +69,51 @@ namespace LocationMapper.WebScrapers
             }
         }
 
-        public bool TryGetRoughCragLocation(string page, out (string County, string Country) location)
+        public bool TryGetCragInformationFromCragPage(string page, out UkcCrag crag)
         {
             var parsedWebPage = parser.Parse(page);
+            var cragName = GetCragnameFromParsedPage(parsedWebPage);
 
-            var locationDetailsList = parsedWebPage
-                .All
-                .FirstOrDefault(element => element.LocalName == "ol"); // only one ordered list on the page
+            var data = parsedWebPage
+                ?.All
+                ?.FirstOrDefault()
+                ?.FirstElementChild
+                ?.Children
+                ?.FirstOrDefault(child => child.InnerHtml.Contains("\nvar id = "))
+                ?.InnerHtml;
 
-            // Check really is a ukc crag page.
-            var firstElementContent = locationDetailsList?.Children?.FirstOrDefault()?.OuterHtml;
-            if (firstElementContent == "<li class=\"breadcrumb-item\"><a href=\"/logbook/\">Logbooks</a></li>")
+            if (string.IsNullOrWhiteSpace(data))
             {
-                var county = locationDetailsList
-                    ?.Children[2]
-                    ?.Children
-                    ?.FirstOrDefault()
-                    ?.InnerHtml;
-
-                var country = locationDetailsList
-                    ?.Children[1]
-                    ?.Children
-                    ?.FirstOrDefault()
-                    ?.InnerHtml;
-
-                location = (County: county, Country: country);
-            }
-            else
-            {
-                location = (County: null, Country: null);
+                crag = null;
+                return false;
             }
 
+            var cragId = GetCragIdFromData(data);
+            var latitudate = GetLatitudeFromData(data);
+            var longitude = GetLongitudeFromData(data);
 
-            if (location.County == null && location.County == null)
+            var (County, Country) = TryGetRoughCragLocation(page);
+
+            //These must not be null
+            if (cragId == null || string.IsNullOrWhiteSpace(cragName))
             {
+                crag = null;
                 return false;
             }
             else
             {
+                crag = new UkcCrag()
+                {
+                    CragName = cragName,
+                    UkcCragId = cragId.Value,
+                    Location = new MapLocation()
+                    {
+                        Latitude = latitudate,
+                        Longitude = longitude
+                    },
+                    Country = Country,
+                    County = County
+                };
                 return true;
             }
         }
@@ -131,12 +139,87 @@ namespace LocationMapper.WebScrapers
             }
         }
 
+        private (string County, string Country) TryGetRoughCragLocation(string page)
+        {
+            var parsedWebPage = parser.Parse(page);
+
+            var locationDetailsList = parsedWebPage
+                .All
+                .FirstOrDefault(element => element.LocalName == "ol"); // only one ordered list on the page
+
+            // Check really is a ukc crag page.
+            var firstElementContent = locationDetailsList?.Children?.FirstOrDefault()?.OuterHtml;
+            if (firstElementContent == "<li class=\"breadcrumb-item\"><a href=\"/logbook/\">Logbooks</a></li>")
+            {
+                var county = locationDetailsList
+                    ?.Children[2]
+                    ?.Children
+                    ?.FirstOrDefault()
+                    ?.InnerHtml;
+
+                var country = locationDetailsList
+                    ?.Children[1]
+                    ?.Children
+                    ?.FirstOrDefault()
+                    ?.InnerHtml;
+
+                return (County: county, Country: country);
+            }
+            else
+            {
+                return (County: null, Country: null);
+            }
+        }
+
         private int FindCragIdInLink(string cragLink)
         {
             var idSectionRegex = new Regex(@"id=[0-9]*");
             var cragId = idSectionRegex.Matches(cragLink).First().ToString();
 
             return int.Parse(cragId.Substring(3));
+        }
+
+        private int? GetCragIdFromData(string data)
+        {
+            var cragIdRegex = new Regex("var id = [0-9]+,");
+            var debug = cragIdRegex.Match(data);
+            var match = cragIdRegex.Match(data)?.Value;
+            var idAsString = match?.Substring(9, match.Length - 10);
+            if (int.TryParse(idAsString, out var id))
+            {
+                return id;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        private decimal GetLongitudeFromData(string data)
+        {
+            var latitudeRegex = new Regex(@"lng = -?[0-9]+\.[0-9]+,");
+            var match = latitudeRegex.Match(data).Value;
+            var latitudeAsString = match.Substring(6, match.Length - 7);
+            return decimal.Parse(latitudeAsString);
+        }
+
+        private decimal GetLatitudeFromData(string data)
+        {
+            var longitudeRegex = new Regex(@"lat = -?[0-9]+\.[0-9]+,");
+            var match = longitudeRegex.Match(data).Value;
+            var longitudeAsString = match.Substring(6, match.Length - 7);
+            return decimal.Parse(longitudeAsString);
+        }
+
+        private string GetCragnameFromParsedPage(AngleSharp.Dom.Html.IHtmlDocument parsedWebPage)
+        {
+            return parsedWebPage
+                ?.All
+                ?.FirstOrDefault()
+                ?.FirstElementChild
+                ?.FirstElementChild
+                ?.InnerHtml
+                ?.SubstringOrDefault("Ukc Logbook - ".Length);
         }
     }
 }

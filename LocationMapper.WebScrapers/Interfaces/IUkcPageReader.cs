@@ -1,4 +1,6 @@
-﻿namespace LocationMapper.WebScrapers.Interfaces
+﻿using System.Threading.Tasks;
+
+namespace LocationMapper.WebScrapers.Interfaces
 {
     interface IUkcPageReader
     {

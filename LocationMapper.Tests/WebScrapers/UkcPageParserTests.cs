@@ -6,6 +6,7 @@ using LocationMapper.WebScrapers;
 using LocationMapper.Tests.WebScrapers.TestDocuments;
 using System.Linq;
 using LocationMapper.Entities;
+using LocationMapper.WebScrapers.Entities;
 
 namespace LocationMapper.Tests.WebScrapers
 {
@@ -70,58 +71,75 @@ namespace LocationMapper.Tests.WebScrapers
         }
 
         [TestMethod]
-        public void TryGetRoughCragLocation_StanagePage_ExpectStanagesLocation()
+        public void TryGetCragInformationFromCragPage_Stanage_ExpectStanageInformation()
         {
             var page = documentReader.ReadDocument("StanageLogbookPage.txt");
 
-            var foundLocation = pageParser.TryGetRoughCragLocation(page, out var location);
+            var readPageData = pageParser.TryGetCragInformationFromCragPage(page, out var crag);
+            var expected = new UkcCrag()
+            {
+                CragName = "Stanage Popular",
+                UkcCragId = 104,
+                Location = new MapLocation()
+                {
+                    Longitude = -1.6319M,
+                    Latitude = 53.3458M
+                },
+                Country = "England",
+                County = "Derbyshire"
+            };
 
-            Assert.IsTrue(foundLocation);
-            Assert.AreEqual(("Derbyshire", "England"), location);
+            Assert.IsTrue(readPageData);
+            Assert.AreEqual(expected.CragName, crag.CragName);
+            Assert.AreEqual(expected.UkcCragId, crag.UkcCragId);
+            Assert.AreEqual(expected.Location.Latitude, crag.Location.Latitude);
+            Assert.AreEqual(expected.Location.Longitude, crag.Location.Longitude);
+            Assert.AreEqual(expected.Country, crag.Country);
+            Assert.AreEqual(expected.County, crag.County);
         }
 
         [TestMethod]
-        public void TryGetRoughCragLocation_CragNotFoundPage_ExpectLocationNotFound()
+        public void TryGetCragInformationFromCragPage_CragNotFoundPage_ExpectLocationNotFound()
         {
             var page = documentReader.ReadDocument("CragNotFoundPage.txt");
 
-            var foundLocation = pageParser.TryGetRoughCragLocation(page, out var location);
+            var foundInformation = pageParser.TryGetCragInformationFromCragPage(page, out var crag);
 
-            Assert.IsFalse(foundLocation);
-            Assert.AreEqual((null, null), location);
+            Assert.IsFalse(foundInformation);
+            Assert.AreEqual(null, crag);
         }
 
         [TestMethod]
-        public void TryGetRoughCragLocation_RandomWebPage_ExpectLocationNotFound()
+        public void TryGetCragInformationFromCragPage_RandomWebPage_ExpectLocationNotFound()
         {
             var page = documentReader.ReadDocument("BbcNewsHomePage.txt");
 
-            var foundLocation = pageParser.TryGetRoughCragLocation(page, out var location);
+            var foundInformation = pageParser.TryGetCragInformationFromCragPage(page, out var crag);
 
-            Assert.IsFalse(foundLocation);
-            Assert.AreEqual((null, null), location);
+            Assert.IsFalse(foundInformation);
+            Assert.AreEqual(null, crag);
         }
 
         [TestMethod]
-        public void TryGetRoughCragLocation_EmptyPage_ExpectLocationNotFound()
+        public void TryGetCragInformationFromCragPage_EmptyPage_ExpectLocationNotFound()
         {
             var page = "";
 
-            var foundLocation = pageParser.TryGetRoughCragLocation(page, out var location);
+            var foundInformation = pageParser.TryGetCragInformationFromCragPage(page, out var crag);
 
-            Assert.IsFalse(foundLocation);
-            Assert.AreEqual((null, null), location);
+            Assert.IsFalse(foundInformation);
+            Assert.AreEqual(null, crag);
         }
 
         [TestMethod]
-        public void TryGetRoughCragLocation_NullPage_ExpectLocationNotFound()
+        public void TryGetCragInformationFromCragPage_NullPage_ExpectLocationNotFound()
         {
             string page = null;
 
-            var foundLocation = pageParser.TryGetRoughCragLocation(page, out var location);
+            var foundInformation = pageParser.TryGetCragInformationFromCragPage(page, out var crag);
 
-            Assert.IsFalse(foundLocation);
-            Assert.AreEqual((null, null), location);
+            Assert.IsFalse(foundInformation);
+            Assert.AreEqual(null, crag);
         }
 
        [TestMethod]

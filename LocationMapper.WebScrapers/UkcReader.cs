@@ -1,4 +1,5 @@
 ﻿using LocationMapper.Entities;
+using LocationMapper.WebScrapers.Entities;
 using LocationMapper.WebScrapers.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -58,16 +59,16 @@ namespace LocationMapper.WebScrapers
             }
         }
 
-        public (string County, string Country) GetRoughCragLocation(int cragId)
+        public UkcCrag GetCragData(int ukcCragId)
         {
-            var page = pageReader.GetCragPage(cragId);
-            if (pageParser.TryGetRoughCragLocation(page, out var location))
+            var page = pageReader.GetCragPage(ukcCragId);
+            if (pageParser.TryGetCragInformationFromCragPage(page, out var location))
             {
                 return location;
             }
             else
             {
-                return (County: null, Country: null);
+                return null;
             }
         }
 

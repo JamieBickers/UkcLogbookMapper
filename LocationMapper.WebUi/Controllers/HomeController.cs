@@ -3,8 +3,7 @@ using LocationMapper.WebScrapers.Interfaces;
 using LocationMapper.WebUi.ServiceLogic;
 using System.Diagnostics;
 using LocationMapper.WebUi.Models;
-using System;
-using Microsoft.Extensions.Options;
+using LocationMapper.Repository;
 
 namespace LocationMapper.WebUi.Controllers
 {
@@ -12,14 +11,16 @@ namespace LocationMapper.WebUi.Controllers
     {
         private IUkcReader ukcReader;
         private ICragLocator cragLocator;
+        private ICragRepository cragRepository;
         private MapPlotter mapPlotter;
 
-        public HomeController(IUkcReader ukcReader, ICragLocator cragLocator)
+        public HomeController(IUkcReader ukcReader, ICragLocator cragLocator, ICragRepository cragRepository)
         {
             this.ukcReader = ukcReader;
             this.cragLocator = cragLocator;
+            this.cragRepository = cragRepository;
 
-            mapPlotter = new MapPlotter(cragLocator, ukcReader);
+            mapPlotter = new MapPlotter(ukcReader, cragRepository, cragLocator);
         }
 
         public IActionResult Index()

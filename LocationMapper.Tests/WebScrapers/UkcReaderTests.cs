@@ -1,6 +1,7 @@
 ﻿using LocationMapper.Entities;
 using LocationMapper.Tests.WebScrapers.TestDocuments;
 using LocationMapper.WebScrapers;
+using LocationMapper.WebScrapers.Entities;
 using LocationMapper.WebScrapers.Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
@@ -8,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace LocationMapper.Tests.WebScrapers
 {
@@ -354,11 +356,17 @@ namespace LocationMapper.Tests.WebScrapers
         }
 
         [TestMethod]
-        public void GetRoughCragLocation_ExistingCrag_ExpectCragLocationReturned()
+        public void GetCragData_ExistingCrag_ExpectCragLocationReturned()
         {
             var cragPage = documentReader.ReadDocument("StanageLogbookPage.txt");
 
-            var location = (County: "Derbyshire", Country: "England");
+            var location = new UkcCrag()
+            {
+                Country = "England",
+                County = "Derbyshire",
+                CragName = "Stanage Popular",
+                UkcCragId = 104
+            };
 
             var mockPageReader = new Mock<IUkcPageReader>();
             mockPageReader
@@ -367,22 +375,22 @@ namespace LocationMapper.Tests.WebScrapers
 
             var mockPageParser = new Mock<IUkcPageParser>();
             mockPageParser
-                .Setup(pageParser => pageParser.TryGetRoughCragLocation(cragPage, out location))
+                .Setup(pageParser => pageParser.TryGetCragInformationFromCragPage(cragPage, out location))
                 .Returns(true);
 
             ukcReader = new UkcReader(mockPageReader.Object, mockPageParser.Object);
 
-            var actualLocation = ukcReader.GetRoughCragLocation(104);
+            var actualLocation = ukcReader.GetCragData(104);
 
             Assert.AreEqual(location, actualLocation);
         }
 
         [TestMethod]
-        public void GetRoughCragLocation_CragDoesNotExist_ExpectNull()
+        public void GetCragData_CragDoesNotExist_ExpectNull()
         {
             var cragPage = documentReader.ReadDocument("StanageLogbookPage.txt");
 
-            var location = (County: (string)null, Country: (string)null);
+            UkcCrag location = null;
 
             var mockPageReader = new Mock<IUkcPageReader>();
             mockPageReader
@@ -391,12 +399,12 @@ namespace LocationMapper.Tests.WebScrapers
 
             var mockPageParser = new Mock<IUkcPageParser>();
             mockPageParser
-                .Setup(pageParser => pageParser.TryGetRoughCragLocation(cragPage, out location))
+                .Setup(pageParser => pageParser.TryGetCragInformationFromCragPage(cragPage, out location))
                 .Returns(true);
 
             ukcReader = new UkcReader(mockPageReader.Object, mockPageParser.Object);
 
-            var actualLocation = ukcReader.GetRoughCragLocation(104);
+            var actualLocation = ukcReader.GetCragData(104);
 
             Assert.AreEqual(location, actualLocation);
         }

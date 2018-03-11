@@ -10,7 +10,7 @@ namespace LocationMapper.Repository
         public static ICragRepository GetCragRepository(string connectionString)
         {
             var dbOptionsBuilder = new DbContextOptionsBuilder<CragContext>();
-            dbOptionsBuilder.UseNpgsql(connectionString);
+            dbOptionsBuilder.UseNpgsql(connectionString).EnableSensitiveDataLogging();
 
             var cragContext = new CragContext(dbOptionsBuilder.Options);
            return new CragRepository(cragContext);
