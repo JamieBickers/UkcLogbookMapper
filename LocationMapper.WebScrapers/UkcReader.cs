@@ -4,6 +4,7 @@ using LocationMapper.WebScrapers.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("LocationMapper.Tests")]
@@ -83,6 +84,19 @@ namespace LocationMapper.WebScrapers
             else
             {
                 userId = 0;
+                return false;
+            }
+        }
+
+        public bool DoesUserExist(int ukcUserId)
+        {
+            try
+            {
+                pageReader.GetUserLogbookPage(ukcUserId);
+                return true;
+            }
+            catch (AggregateException exception) when (exception.InnerExceptions.FirstOrDefault().GetType() == typeof(HttpRequestException))
+            {
                 return false;
             }
         }

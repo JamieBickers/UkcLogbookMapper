@@ -6,6 +6,6 @@ namespace LocationMapper.WebScrapers.Interfaces
     {
         string GetCragPage(int cragId);
         string GetSearchPage(string searchTerm);
-        string GetUserLogbookPage(int userId, int pageNumber);
+        string GetUserLogbookPage(int userId, int pageNumber = 0);
     }
 }

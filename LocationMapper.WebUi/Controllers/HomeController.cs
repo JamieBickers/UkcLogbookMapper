@@ -14,11 +14,11 @@ namespace LocationMapper.WebUi.Controllers
         private ICragRepository cragRepository;
         private MapPlotter mapPlotter;
 
-        public HomeController(IUkcReader ukcReader, ICragLocator cragLocator, ICragRepository cragRepository)
+        public HomeController(IUkcReader ukcReader, ICragLocator cragLocator)
         {
             this.ukcReader = ukcReader;
             this.cragLocator = cragLocator;
-            this.cragRepository = cragRepository;
+            cragRepository = CragRepositoryFactory.GetCragRepository("Host=localhost;Username=UkcLogbookMapper;Password=qwerty;Database=Ukc");
 
             mapPlotter = new MapPlotter(ukcReader, cragRepository, cragLocator);
         }
@@ -45,11 +45,23 @@ namespace LocationMapper.WebUi.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public IActionResult TryFindUser(string ukcUserName)
+        public IActionResult TryFindUserByName(string ukcUserName)
         {
             if (ukcReader.TryGetUserId(ukcUserName, out var userId))
             {
                 return Ok(userId);
+            }
+            else
+            {
+                return StatusCode(404);
+            }
+        }
+
+        public IActionResult TryFindUserById(int ukcUserId)
+        {
+            if (ukcReader.DoesUserExist(ukcUserId))
+            {
+                return Ok(ukcUserId);
             }
             else
             {

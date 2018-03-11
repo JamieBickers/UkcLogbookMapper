@@ -18,7 +18,7 @@ namespace LocationMapper.Tests.IntegrationTests
         [TestMethod]
         public void HomeControllerIndex_UsingDefaultConstructorArguments_ExpectNoExceptionsThrownAndNotNull()
         {
-            var controller = new HomeController(new UkcReader(), new CragLocator(), CragRepositoryFactory.GetCragRepository(connectionString));
+            var controller = new HomeController(new UkcReader(), new CragLocator());
             var result = controller.Index();
             Assert.IsNotNull(result);
         }
@@ -26,7 +26,7 @@ namespace LocationMapper.Tests.IntegrationTests
         [TestMethod]
         public void HomeControllerTryFindUser_UserExists_ExpectNoExceptionsThrownAndNotNull()
         {
-            var controller = new HomeController(new UkcReader(), new CragLocator(), CragRepositoryFactory.GetCragRepository(connectionString));
+            var controller = new HomeController(new UkcReader(), new CragLocator());
             var result = controller.TryFindUser("jmab");
             Assert.IsNotNull(result);
         }
@@ -34,7 +34,7 @@ namespace LocationMapper.Tests.IntegrationTests
         [TestMethod]
         public void HomeControllerTryFindUser_UserDoesNotExist_ExpectNoExceptionsThrownAndNotNull()
         {
-            var controller = new HomeController(new UkcReader(), new CragLocator(), CragRepositoryFactory.GetCragRepository(connectionString));
+            var controller = new HomeController(new UkcReader(), new CragLocator());
             var result = controller.TryFindUser("ghdehyerdgfashdf");
             Assert.IsNotNull(result);
         }
@@ -42,7 +42,7 @@ namespace LocationMapper.Tests.IntegrationTests
         [TestMethod]
         public void HomeControllerMap_UsingExistingUser_ExpectNoExceptionsThrownAndNotNull()
         {
-            var controller = new HomeController(new UkcReader(), new CragLocator(), CragRepositoryFactory.GetCragRepository(connectionString));
+            var controller = new HomeController(new UkcReader(), new CragLocator());
             var result = controller.MapName("jmab");
             Assert.IsNotNull(result);
         }
@@ -50,7 +50,7 @@ namespace LocationMapper.Tests.IntegrationTests
         [TestMethod]
         public void HomeControllerMap_UserDoesNotExist_ExpectNoException()
         {
-            var controller = new HomeController(new UkcReader(), new CragLocator(), CragRepositoryFactory.GetCragRepository(connectionString));
+            var controller = new HomeController(new UkcReader(), new CragLocator());
             var result = controller.MapName("dfsdfsdfsghidsgfhjdsfds");
             Assert.IsNotNull(result);
         }

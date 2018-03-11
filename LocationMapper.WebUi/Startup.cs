@@ -27,7 +27,6 @@ namespace LocationMapper.WebUi
             services.AddMvc();
             services.AddTransient<IUkcReader, UkcReader>();
             services.AddTransient<ICragLocator, CragLocator>();
-            services.AddTransient<ICragRepository, CragRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

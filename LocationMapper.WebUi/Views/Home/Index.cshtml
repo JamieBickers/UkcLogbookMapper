@@ -13,6 +13,9 @@
         <input class="input-sm" id="userid-input" />
         <button id="go-to-map-userid">Go!</button>
     </div>
+    <div hidden id="show-if-userid-failed">
+        <p>Not user with that Id was found, perhaps your logbook is private?</p>
+    </div>
 </div>
 
 <script>
@@ -20,7 +23,7 @@
         .onclick = function () {
             const userName = document.getElementById("username-input").value;
 
-            fetch(`home/TryFindUser?ukcUserName=${userName}`).then(function (response) {
+            fetch(`home/TryFindUserByName?ukcUserName=${userName}`).then(function (response) {
                 console.log(response.status);
                 if (response.ok) {
                     window.location.href = `${"@Url.Action("MapName", "Home")"}?ukcUserName=${userName}`;
@@ -34,7 +37,16 @@
     document.getElementById("go-to-map-userid")
         .onclick = function () {
             const userId = document.getElementById("userid-input").value;
-            window.location.href = `${"@Url.Action("MapId", "Home")"}?ukcUserId=${userId}`;
+
+            fetch(`home/TryFindUserById?ukcUserId=${userId}`).then(function (response) {
+                console.log(response.status);
+                if (response.ok) {
+                    window.location.href = `${"@Url.Action("MapId", "Home")"}?ukcUserId=${userId}`;
+                }
+                else {
+                    document.getElementById("show-if-userid-failed").removeAttribute("hidden");
+                }
+                        });
         };
 </script>
 
